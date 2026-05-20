@@ -750,10 +750,11 @@
       .hero { padding: 60px 20px 40px; }
       section { padding: 40px 20px; }
       .spotlight { padding: 28px 24px; }
-      table { font-size: 14px; }
-      td:first-child { font-size: 11px; width: auto; min-width: 130px; }
-      td.title-cell { width: auto; }
-      td.note-cell { display: none; }
+      /* Tables: horizontal scroll on mobile so all columns remain accessible */
+      .stratum-block { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+      .stratum-block table { min-width: 640px; font-size: 14px; }
+      .stratum-block td:first-child { font-size: 11px; min-width: 140px; }
+      .phases-table { font-size: 14px; }
       nav.anchor-nav { font-size: 12px; }
       nav.anchor-nav ul { padding: 10px 16px; gap: 12px 18px; }
       .three-poles { padding: 36px 20px; }
