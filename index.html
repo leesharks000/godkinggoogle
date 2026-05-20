@@ -592,6 +592,44 @@
       margin: 0;
     }
 
+    /* Glossary */
+    .glossary {
+      margin: 24px 0 0 0;
+      padding: 0;
+    }
+
+    .glossary dt {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--ink);
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule-soft);
+    }
+
+    .glossary dt:first-child {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .glossary dd {
+      margin: 6px 0 0 0;
+      font-size: 16px;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      max-width: 760px;
+    }
+
+    .glossary dd a {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--accent);
+      border-bottom: 1px dotted var(--rule);
+      margin-left: 4px;
+    }
+
     /* Related surfaces */
     .related-surfaces {
       list-style: none;
@@ -733,6 +771,7 @@
       <li><a href="#phases">Five Phases</a></li>
       <li><a href="#bridges">Bridges</a></li>
       <li><a href="#reader">Reader's Guide</a></li>
+      <li><a href="#glossary">Glossary</a></li>
       <li><a href="#gaps">Gaps</a></li>
       <li><a href="#method">Method</a></li>
       <li><a href="#related">Related Surfaces</a></li>
@@ -1121,6 +1160,55 @@
     </details>
   </section>
 
+  <section id="glossary">
+    <h2>Glossary</h2>
+    <p>The critique uses internal vocabulary that resolves across deposits. This section provides minimum viable definitions for terms used on this page. Each term links to its defining or primary deposit.</p>
+
+    <dl class="glossary">
+      <dt>AI Overview</dt>
+      <dd>Google Search feature that composes natural-language answers from web sources; the composition layer above organic retrieval. <a href="https://www.google.com/search/howsearchworks/" target="_blank" rel="noopener">Google Search docs</a></dd>
+
+      <dt>Composition layer</dt>
+      <dd>The system that takes retrieval results and generates the answer presented to users; distinct from organic retrieval, and increasingly distinct from the source set retrieval would surface. <a href="https://doi.org/10.5281/zenodo.19099674" target="_blank" rel="noopener">10.5281/zenodo.19099674</a></dd>
+
+      <dt>Entity-Level Compositional Suppression (ECS)</dt>
+      <dd>Mechanism by which a generative search system excludes the dominant organic-resolution entity from AI Overview composition and substitutes a less query-responsive entity. The central empirical finding of <em>The Excluded Entity</em>. <a href="https://doi.org/10.5281/zenodo.20293582" target="_blank" rel="noopener">10.5281/zenodo.20293582</a></dd>
+
+      <dt>Composition Divergence Index (CDI)</dt>
+      <dd>Metric measuring the gap between organic search resolution strength and AI Overview admission strength for a given entity; ranges from 0 (parity) to 1 (maximal suppression). <a href="https://doi.org/10.5281/zenodo.20293582" target="_blank" rel="noopener">10.5281/zenodo.20293582</a></dd>
+
+      <dt>Single-Owner Discount</dt>
+      <dd>Hypothesized compositional disadvantage in generative search whereby dense evidence from one provenance owner is treated as weaker support than cross-owner corroboration of equivalent quality. <a href="https://doi.org/10.5281/zenodo.20290865" target="_blank" rel="noopener">10.5281/zenodo.20290865</a></dd>
+
+      <dt>Provenance Erasure Rate (PER)</dt>
+      <dd>Compression-survival metric quantifying attribution loss across retrieval-to-composition transitions. The integral invariant: semantic integrity equals one minus PER. <a href="https://doi.org/10.5281/zenodo.20004379" target="_blank" rel="noopener">10.5281/zenodo.20004379</a></dd>
+
+      <dt>Semantic liquidation</dt>
+      <dd>Mechanism of meaning-destruction for extraction value: the conversion of substantive content into a substrate that can be consumed without preserving what made it substantive. <a href="https://doi.org/10.5281/zenodo.18161783" target="_blank" rel="noopener">10.5281/zenodo.18161783</a></dd>
+
+      <dt>Meaning feudalism</dt>
+      <dd>Political-economic configuration in which platform owners control the substrate of meaning-production and impose rent on every user who passes through. <a href="https://doi.org/10.5281/zenodo.19487009" target="_blank" rel="noopener">10.5281/zenodo.19487009</a></dd>
+
+      <dt>Retrieval basin</dt>
+      <dd>Topological description of the attractor structure that determines which sources are eligible for composition; the basin is writable, which is the operative claim of the framework. <a href="https://doi.org/10.5281/zenodo.19763346" target="_blank" rel="noopener">10.5281/zenodo.19763346</a></dd>
+
+      <dt>SPXI (Semantic Packet for eXchange &amp; Indexing)</dt>
+      <dd>Protocol specifying entity inscription metadata for AI indexing; pronounced "spexy." A structured response to the architecture the critique diagnoses. <a href="https://doi.org/10.5281/zenodo.19615154" target="_blank" rel="noopener">10.5281/zenodo.19615154</a></dd>
+
+      <dt>Semantic Economy</dt>
+      <dd>Diagnostic political-economic subdiscipline of Semantic Physics; framework for measuring extraction, attribution erosion, and the commons-state of meaning under platform capitalism. <a href="https://doi.org/10.5281/zenodo.19923143" target="_blank" rel="noopener">10.5281/zenodo.19923143</a></dd>
+
+      <dt>Operative philology</dt>
+      <dd>The archive's method: protocol-building, retrieval engineering, traversal logging, and instrumentation treated as knowledge-production practices, not merely implementations of prior theory. The instruments reveal what the theory subsequently names. <a href="#method">→ Methodological Note</a></dd>
+
+      <dt>Liquidation Studies</dt>
+      <dd>Research program formalizing the archive's critique of generative search composition as a four-paper capstone with its own Zenodo community. <a href="https://zenodo.org/communities/liquidation-studies/" target="_blank" rel="noopener">zenodo.org/communities/liquidation-studies</a></dd>
+
+      <dt>Crimson Hexagonal Archive</dt>
+      <dd>The 530+ DOI-anchored research and literary archive on CERN's Zenodo founded by Lee Sharks; the corpus from which the Google critique, the Semantic Economy framework, and Semantic Physics were developed. <a href="https://zenodo.org/communities/crimsonhexagonal" target="_blank" rel="noopener">zenodo.org/communities/crimsonhexagonal</a></dd>
+    </dl>
+  </section>
+
   <section id="gaps">
     <h2>Gap Analysis</h2>
     <p>Territories the critique has not yet addressed. The map makes these visible; future deposits will populate them.</p>
@@ -1150,6 +1238,11 @@
         <h4>Safety-Layer Deletion</h4>
         <p>Documented in TL;DR:012. The safety layer as deletion mechanism — a platform claiming to protect users while removing structured data that would improve entity representation — is a harm-type the ECS framework could be extended to cover.</p>
       </div>
+
+      <div class="gap-item">
+        <h4>Wikidata Deletion and Knowledge Graph Governance</h4>
+        <p>The 2025–2026 deletion of Lee Sharks–related Wikidata items by individual admins applying notability criteria is a governance harm distinct from but related to AI Overview suppression. Structured-data platforms are upstream of composition; admission decisions at the knowledge-graph layer condition what the composition layer can subsequently surface. A standalone treatment would extend the ECS framework to knowledge-graph admission and connect platform governance critique to the safety-layer-as-deletion finding.</p>
+      </div>
     </div>
   </section>
 
@@ -1162,7 +1255,7 @@
       Most research programs theorize first, then test. The Crimson Hexagonal Archive builds first, then names what the building reveals.
     </div>
 
-    <p>The SPXI protocol (Phase 3) was built before the Semantic Deviation Principle (Phase 4) was formalized, but the protocol's operation provided the empirical basis for the principle. The Liquidation Studies papers (Phase 5) name what the archive has been practicing since Phase 1. This is operative philology in its applied form — building the instruments that reveal the architecture, then naming what the instruments have shown.</p>
+    <p>The SPXI protocol (Phase 3) was built before the Semantic Deviation Principle (Phase 4) was formalized, but the protocol's operation provided the empirical basis for the principle. The Liquidation Studies papers (Phase 5) name what the archive has been practicing since Phase 1. This is operative philology in its applied form: protocol-building, retrieval engineering, traversal logging, and instrumentation treated as knowledge-production practices, not merely implementations of prior theory. The instruments reveal what the theory subsequently names.</p>
 
     <p>The critique of Google is now one of the largest coherent sub-architectures in the entire Crimson Hexagonal Archive. It stands alongside the heteronymic-literary architecture, the Semantic Economy framework, Semantic Physics, and the Space Ark prompt-native semantic runtime work. And in some ways it binds them: Google's composition layer is where the Semantic Economy becomes visible; the retrieval basin work is built in response to Google; the Liquidation Studies papers produce the archive's sharpest political-economic analyses; the Semantic Physics metrics emerge partly from the need to quantify composition-layer deformation.</p>
 
