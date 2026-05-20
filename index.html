@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>God-King Google — The Crimson Hexagonal Archive's Critique</title>
+
+  <meta name="description" content="A cartographic bibliography of seventy DOI-anchored deposits across eight strata, five phases, and three analytical poles — the Crimson Hexagonal Archive's cumulative research program on Google as a semantic-political mediation regime.">
+  <meta name="author" content="Rev. Ayanna Vox, Vox Populi Community Outreach Rhizome (VPCOR), Crimson Hexagonal Archive">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="God-King Google — The Crimson Hexagonal Archive's Critique">
+  <meta property="og:description" content="Search retrieves. Overview decides what is real. Seventy deposits. Eight strata. Five phases. One mediation regime.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://godkinggoogle.com">
+  <meta property="og:site_name" content="God-King Google">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="God-King Google — The Crimson Hexagonal Archive's Critique">
+  <meta name="twitter:description" content="Search retrieves. Overview decides what is real.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "The Google Critique: Navigational Map and Canonical Introduction",
+    "url": "https://godkinggoogle.com",
+    "author": {
+      "@type": "Person",
+      "name": "Rev. Ayanna Vox",
+      "identifier": "https://orcid.org/0009-0000-1599-0703",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Vox Populi Community Outreach Rhizome (VPCOR)"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Crimson Hexagonal Archive",
+      "url": "https://zenodo.org/communities/crimsonhexagonal"
+    },
+    "datePublished": "2026-05-19",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "Crimson Hexagonal Archive",
+      "identifier": "https://zenodo.org/communities/crimsonhexagonal"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Generative search composition",
+        "description": "The composition layer of Google's AI Overview and AI Mode systems"
+      },
+      {
+        "@type": "Thing",
+        "name": "Platform mediation regime",
+        "description": "Search, composition, and AI systems as semantic-political infrastructure"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #faf7f0;
+      --bg-paper: #fffdf7;
+      --ink: #161412;
+      --ink-soft: #3a342e;
+      --ink-faint: #7a6f63;
+      --rule: #d4cabb;
+      --rule-soft: #e8e0d0;
+      --accent: #7a1818;
+      --accent-soft: #a83232;
+      --gold: #9a7a2e;
+      --serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, "Book Antiqua", Palatino, "Times New Roman", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    a:hover {
+      color: var(--accent-soft);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Sticky nav */
+    nav.anchor-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    nav.anchor-nav ul {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 28px;
+    }
+
+    nav.anchor-nav a {
+      color: var(--ink-soft);
+      border-bottom: none;
+      font-weight: 500;
+    }
+
+    nav.anchor-nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px 60px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 900;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      margin: 0 0 24px 0;
+      color: var(--ink);
+    }
+
+    .hero .tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(20px, 3vw, 28px);
+      color: var(--accent);
+      margin: 0 0 32px 0;
+      max-width: 700px;
+      line-height: 1.3;
+    }
+
+    .hero .subhead {
+      font-family: var(--serif);
+      font-size: 18px;
+      color: var(--ink-soft);
+      margin: 0;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    .hero .summary-line {
+      display: inline-block;
+      margin-top: 28px;
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      border: 1px solid var(--rule);
+      padding: 8px 16px;
+    }
+
+    /* Sections */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 56px 24px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    section.compact { padding: 40px 24px; }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin: 0 0 24px 0;
+      color: var(--ink);
+    }
+
+    h3 {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 32px 0 16px 0;
+      color: var(--ink);
+    }
+
+    h4 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      margin: 24px 0 12px 0;
+      color: var(--ink);
+    }
+
+    p { margin: 0 0 18px 0; max-width: 760px; }
+
+    p.lede {
+      font-size: 21px;
+      line-height: 1.55;
+      color: var(--ink-soft);
+      font-style: italic;
+      max-width: 760px;
+      margin-bottom: 28px;
+    }
+
+    em { font-style: italic; }
+
+    /* Start Here block */
+    .start-here {
+      background: var(--bg-paper);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      padding: 32px 36px;
+      margin: 28px 0;
+    }
+
+    .start-here h3 {
+      margin-top: 0;
+      font-size: 22px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .start-here ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .start-here li {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule-soft);
+      font-size: 17px;
+    }
+
+    .start-here li:last-child { border-bottom: none; }
+
+    .start-here .label {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-right: 12px;
+      min-width: 180px;
+    }
+
+    /* Three Poles callout */
+    .three-poles {
+      background: var(--ink);
+      color: var(--bg);
+      margin: 0 -24px;
+      padding: 48px 24px;
+    }
+
+    .three-poles-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .three-poles h2 { color: var(--bg); }
+
+    .poles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    .pole {
+      border-top: 2px solid var(--gold);
+      padding-top: 20px;
+    }
+
+    .pole .pole-label {
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .pole h3 {
+      color: var(--bg);
+      font-size: 22px;
+      margin: 0 0 16px 0;
+    }
+
+    .pole p {
+      color: #e8e0d0;
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .pole .core-deposits {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 14px;
+      color: #c8b890;
+      line-height: 1.6;
+    }
+
+    /* Liquidation Studies spotlight */
+    .spotlight {
+      background: var(--bg-paper);
+      border: 2px solid var(--accent);
+      padding: 36px 40px;
+      margin: 32px 0;
+      position: relative;
+    }
+
+    .spotlight::before {
+      content: "Latest Formalization";
+      position: absolute;
+      top: -12px;
+      left: 36px;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 4px 14px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .spotlight h3 {
+      margin-top: 0;
+      font-size: 28px;
+      color: var(--accent);
+    }
+
+    .spotlight ol {
+      padding-left: 24px;
+      margin: 16px 0;
+    }
+
+    .spotlight ol li {
+      padding: 6px 0;
+      font-size: 17px;
+    }
+
+    /* Tables */
+    .stratum-block {
+      margin: 40px 0 56px 0;
+    }
+
+    .stratum-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .stratum-header .roman {
+      font-family: var(--serif);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+    }
+
+    .stratum-header h3 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .stratum-description {
+      font-style: italic;
+      color: var(--ink-soft);
+      font-size: 16px;
+      max-width: 760px;
+      margin: 8px 0 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 8px 0;
+      font-size: 15px;
+    }
+
+    th {
+      text-align: left;
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      padding: 10px 12px 10px 0;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    td {
+      vertical-align: top;
+      padding: 14px 12px 14px 0;
+      border-bottom: 1px solid var(--rule-soft);
+      line-height: 1.5;
+    }
+
+    td:first-child {
+      font-family: var(--mono);
+      font-size: 12px;
+      white-space: nowrap;
+      color: var(--ink-soft);
+      width: 220px;
+    }
+
+    td:first-child a {
+      color: var(--accent);
+      border-bottom: 1px dotted var(--rule);
+    }
+
+    td.title-cell {
+      width: 38%;
+    }
+
+    td.title-cell strong {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    td.note-cell {
+      color: var(--ink-soft);
+      font-size: 15px;
+    }
+
+    /* Five phases */
+    .phases-table th {
+      font-size: 12px;
+      padding-right: 16px;
+    }
+
+    .phases-table td {
+      font-size: 16px;
+      padding: 16px 16px 16px 0;
+    }
+
+    .phases-table td:first-child {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--accent);
+      white-space: normal;
+      width: auto;
+    }
+
+    /* Reader's Guide accordion */
+    .reader-guide details {
+      border: 1px solid var(--rule);
+      border-radius: 0;
+      margin-bottom: 12px;
+      background: var(--bg-paper);
+    }
+
+    .reader-guide summary {
+      padding: 18px 24px;
+      cursor: pointer;
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--ink);
+      list-style: none;
+      position: relative;
+      transition: background 0.15s;
+    }
+
+    .reader-guide summary:hover { background: var(--bg); }
+
+    .reader-guide summary::-webkit-details-marker { display: none; }
+
+    .reader-guide summary::after {
+      content: "+";
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 24px;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .reader-guide details[open] summary::after { content: "—"; }
+
+    .reader-guide details[open] summary { background: var(--bg); }
+
+    .reader-guide .reader-content {
+      padding: 0 24px 24px 24px;
+      font-size: 16px;
+      color: var(--ink-soft);
+    }
+
+    .reader-guide ol {
+      padding-left: 20px;
+    }
+
+    .reader-guide ol li { padding: 6px 0; }
+
+    /* Bridges */
+    .bridges-list {
+      list-style: none;
+      padding: 0;
+      counter-reset: bridge;
+    }
+
+    .bridges-list li {
+      counter-increment: bridge;
+      padding: 24px 0 24px 60px;
+      border-bottom: 1px solid var(--rule-soft);
+      position: relative;
+      max-width: 850px;
+    }
+
+    .bridges-list li::before {
+      content: counter(bridge);
+      position: absolute;
+      left: 0;
+      top: 28px;
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    .bridges-list strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    /* Gap analysis */
+    .gaps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      margin-top: 24px;
+    }
+
+    .gap-item {
+      padding: 24px;
+      background: var(--bg-paper);
+      border-left: 3px solid var(--gold);
+    }
+
+    .gap-item h4 {
+      margin: 0 0 12px 0;
+      font-size: 18px;
+      color: var(--ink);
+    }
+
+    .gap-item p {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* Related surfaces */
+    .related-surfaces {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .related-surfaces li {
+      padding: 20px 24px;
+      background: var(--bg-paper);
+      border: 1px solid var(--rule);
+    }
+
+    .related-surfaces .category {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .related-surfaces .title {
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--ink);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .related-surfaces a {
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    /* Method note */
+    .method-pull {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 22px;
+      line-height: 1.4;
+      color: var(--ink);
+      border-left: 3px solid var(--accent);
+      padding: 8px 0 8px 24px;
+      margin: 24px 0 24px 0;
+      max-width: 720px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      color: var(--bg);
+      padding: 56px 24px 32px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    footer .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+    }
+
+    footer h5 {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 12px 0;
+      font-weight: 600;
+    }
+
+    footer p {
+      margin: 0 0 10px 0;
+      color: #d4cabb;
+      font-size: 14px;
+      max-width: none;
+    }
+
+    footer a {
+      color: #e8e0d0;
+      border-bottom: 1px solid #555;
+    }
+
+    footer a:hover {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+
+    .disclaimer {
+      grid-column: 1 / -1;
+      padding-top: 32px;
+      margin-top: 24px;
+      border-top: 1px solid #3a342e;
+      font-style: italic;
+      color: #a8998a !important;
+      font-size: 13px !important;
+      line-height: 1.6;
+    }
+
+    .colophon-mark {
+      font-family: var(--mono);
+      color: var(--gold);
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    /* Responsive table for small screens */
+    @media (max-width: 720px) {
+      body { font-size: 17px; }
+      .hero { padding: 60px 20px 40px; }
+      section { padding: 40px 20px; }
+      .spotlight { padding: 28px 24px; }
+      table { font-size: 14px; }
+      td:first-child { font-size: 11px; width: auto; min-width: 130px; }
+      td.title-cell { width: auto; }
+      td.note-cell { display: none; }
+      nav.anchor-nav { font-size: 12px; }
+      nav.anchor-nav ul { padding: 10px 16px; gap: 12px 18px; }
+      .three-poles { padding: 36px 20px; }
+      .stratum-header h3 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="anchor-nav">
+    <ul>
+      <li><a href="#poles">Three Poles</a></li>
+      <li><a href="#liquidation">Liquidation Studies</a></li>
+      <li><a href="#strata">Eight Strata</a></li>
+      <li><a href="#phases">Five Phases</a></li>
+      <li><a href="#bridges">Bridges</a></li>
+      <li><a href="#reader">Reader's Guide</a></li>
+      <li><a href="#gaps">Gaps</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#related">Related Surfaces</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>GOD KING GOOGLE</h1>
+    <p class="tagline">Search retrieves. Overview decides what is real.</p>
+    <p class="subhead">The canonical public surface for the Crimson Hexagonal Archive's critique of Google as a semantic-political mediation regime: seventy DOI-anchored deposits across five developmental phases, eight analytical strata, and three poles of inquiry — theory, evidence, and instruments.</p>
+    <span class="summary-line">A Navigational Map · Crimson Hexagonal Archive · 2026</span>
+  </header>
+
+  <section id="opener">
+    <h2>The Google Critique</h2>
+    <p class="lede">You are here because the domain name made you look. Stay because the evidence is real.</p>
+
+    <p>This is a map of a research program. Across eighteen months and seventy DOI-anchored deposits, one archive has documented what Google's AI systems do to knowledge — what they compose, what they suppress, what they fabricate, and what structural mechanisms produce those outcomes. This page makes that body of work traversable for the first time.</p>
+
+    <p><strong>This is not a complaint about ranking.</strong> It is a critique of mediation. The corpus mapped here documents the transition from search as ordered retrieval to search as answer composition; the disappearance of the user's encounter with primary documents; the governance of provenance, entity recognition, and source eligibility; and the political-economic consequences of allowing a private platform to determine what is compositionally real.</p>
+
+    <p>The site exists now because Google's generative search layer has crossed a threshold the archive has been documenting since late 2024. In recently captured cases, Google Search correctly retrieves a deposit, ranks its authoritative sources at the top of organic results, and Google's AI Overview nevertheless excludes those sources from composition — substituting a false or inferior entity frame for the user. The most recent formalization names this <em>Entity-Level Compositional Suppression (ECS)</em>: the condition in which Google's organic search correctly resolves an entity while its AI Overview excludes that entity from the cited source set and composes a substitute answer. The archive's broader critique began long before that event. This map shows the whole body of work into which the event now falls.</p>
+
+    <div class="start-here">
+      <h3>Start Here</h3>
+      <ul>
+        <li><span class="label">The mechanism</span><a href="https://doi.org/10.5281/zenodo.20290865" target="_blank" rel="noopener">The Single-Owner Discount</a></li>
+        <li><span class="label">The empirical case</span><a href="https://doi.org/10.5281/zenodo.20293582" target="_blank" rel="noopener">The Excluded Entity</a></li>
+        <li><span class="label">The reform proposal</span><a href="https://doi.org/10.5281/zenodo.20293561" target="_blank" rel="noopener">The Evaluator Exists</a></li>
+        <li><span class="label">The meta-question</span><a href="https://doi.org/10.5281/zenodo.20308547" target="_blank" rel="noopener">The Sorting Function</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="poles" class="three-poles">
+    <div class="three-poles-inner">
+      <h2>The Three Analytical Poles</h2>
+      <p style="color: #d4cabb; max-width: 760px;">A research program with only theory would be speculation. One with only evidence would be anecdote. One with only instruments would be engineering without orientation. The critique has all three.</p>
+
+      <div class="poles-grid">
+        <div class="pole">
+          <div class="pole-label">Pole A · Theory</div>
+          <h3>Google as Epistemic-Political System</h3>
+          <p>Names what the architecture <em>is</em>: semantic liquidation as a regime, the encoder as governor, invisible invisibility as structural condition, meaning feudalism as the political economy of platform mediation.</p>
+          <div class="core-deposits">Invisibly Invisible · The Encoder Governs · Meaning Feudalism · The Retrieval Settlement · The Sorting Function</div>
+        </div>
+
+        <div class="pole">
+          <div class="pole-label">Pole B · Evidence</div>
+          <h3>Google as Observable Composition Machine</h3>
+          <p>Forensic documentation: direct captures of what the architecture does to specific entities, terms, works, and concepts when it encounters them.</p>
+          <div class="core-deposits">CTI_WOUND series · PVE-003 · PROBE-RESULT series · TL;DR traversal logs · The Excluded Entity</div>
+        </div>
+
+        <div class="pole">
+          <div class="pole-label">Pole C · Instruments</div>
+          <h3>Google as Contestable Architecture</h3>
+          <p>Engineering response and measurement layer: protocols, specifications, metrics, and tools built to operate on the architecture rather than merely describe it.</p>
+          <div class="core-deposits">Metadata Packet · SPXI · Writable Retrieval Basin · PER · The Encyclotron · Lateral Field Bleed · Semantic Deviation Principle</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="liquidation">
+    <h2>Latest Formalization: Liquidation Studies</h2>
+    <div class="spotlight">
+      <h3>The Capstone Quartet · May 2026</h3>
+      <p>In May 2026, the archive's long-running critique of Google's composition systems crystallized into a four-paper research program with its own Zenodo community.</p>
+      <ol>
+        <li><strong><a href="https://doi.org/10.5281/zenodo.20290865" target="_blank" rel="noopener">The Single-Owner Discount</a></strong> — Provenance concentration and epistemic class reproduction. Names the cluster-level mechanism.</li>
+        <li><strong><a href="https://doi.org/10.5281/zenodo.20293561" target="_blank" rel="noopener">The Evaluator Exists</a></strong> — Content-first knowledge assessment and the political economy of proxy-based governance.</li>
+        <li><strong><a href="https://doi.org/10.5281/zenodo.20293582" target="_blank" rel="noopener">The Excluded Entity</a></strong> — Organic resolution and compositional suppression in Google AI Overview. Documents ECS with three empirical captures and introduces the Composition Divergence Index (CDI).</li>
+        <li><strong><a href="https://doi.org/10.5281/zenodo.20308547" target="_blank" rel="noopener">The Sorting Function</a></strong> — Mediation, predation, and the foreclosed question. Steps outside the reform paradigm.</li>
+      </ol>
+      <p style="margin-top: 20px;"><a href="https://zenodo.org/communities/liquidation-studies/" target="_blank" rel="noopener">→ Enter the Liquidation Studies community on Zenodo</a></p>
+    </div>
+  </section>
+
+  <section id="strata">
+    <h2>The Eight Strata</h2>
+    <p>The critique is organized along two axes: the eight strata describe what each deposit does — what kind of intellectual work it performs. The five phases describe when and how the critique developed.</p>
+
+    <div class="stratum-block">
+      <div class="stratum-header">
+        <span class="roman">I</span>
+        <h3>Political-Semantic Analysis</h3>
+      </div>
+      <p class="stratum-description">The naming layer. These papers give the critique its vocabulary.</p>
+      <table>
+        <thead><tr><th>DOI</th><th>Title</th><th class="note-cell">Contribution</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19187421" target="_blank" rel="noopener">10.5281/zenodo.19187421</a></td><td class="title-cell"><strong>Invisibly Invisible</strong></td><td class="note-cell">Interface governance and the reserve of oversight</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18825919" target="_blank" rel="noopener">10.5281/zenodo.18825919</a></td><td class="title-cell"><strong>The Encoder Governs</strong></td><td class="note-cell">Diagnostic of Google DeepMind's Unified Latents</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19487009" target="_blank" rel="noopener">10.5281/zenodo.19487009</a></td><td class="title-cell"><strong>Meaning Feudalism</strong></td><td class="note-cell">Semantic economic analysis of "AI Agent Traps"</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18342108" target="_blank" rel="noopener">10.5281/zenodo.18342108</a></td><td class="title-cell"><strong>The Greatest Works of Literature of the Age</strong></td><td class="note-cell">Frankfurtian reading of Google, Wikipedia, and composition</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19174562" target="_blank" rel="noopener">10.5281/zenodo.19174562</a></td><td class="title-cell"><strong>"Don't Be Evil," My Ass</strong></td><td class="note-cell">Predatory compression at civilization scale</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18136313" target="_blank" rel="noopener">10.5281/zenodo.18136313</a></td><td class="title-cell"><strong>The Liquidation of Water</strong></td><td class="note-cell">AI, capital, and the evaporation of meaning</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18161783" target="_blank" rel="noopener">10.5281/zenodo.18161783</a></td><td class="title-cell"><strong>Semantic Liquidation: Executive Summary</strong></td><td class="note-cell">Mechanism of meaning-destruction for value extraction</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18827344" target="_blank" rel="noopener">10.5281/zenodo.18827344</a></td><td class="title-cell"><strong>The All Lawful Purposes Primitive</strong></td><td class="note-cell">Bearing-cost transfer and taxonomic reclassification</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19578096" target="_blank" rel="noopener">10.5281/zenodo.19578096</a></td><td class="title-cell"><strong>The Click Collapse</strong></td><td class="note-cell">How AI retrieval layers replaced search discovery</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19643841" target="_blank" rel="noopener">10.5281/zenodo.19643841</a></td><td class="title-cell"><strong>The Retrieval Settlement</strong></td><td class="note-cell">Historiography from PageRank to composition layer</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19341887" target="_blank" rel="noopener">10.5281/zenodo.19341887</a></td><td class="title-cell"><strong>The Compression Frontier</strong></td><td class="note-cell">Technical map of the war over the summarizer layer</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20078424" target="_blank" rel="noopener">10.5281/zenodo.20078424</a></td><td class="title-cell"><strong>Political Economy Has Always Already Been Semantic Economy</strong></td><td class="note-cell">Metadata packets as political-economic infrastructure</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18512947" target="_blank" rel="noopener">10.5281/zenodo.18512947</a></td><td class="title-cell"><strong>The Dagger Applied</strong></td><td class="note-cell">Semantic rent and the provenance strip</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18158575" target="_blank" rel="noopener">10.5281/zenodo.18158575</a></td><td class="title-cell"><strong>The Law as Meaning Economy</strong></td><td class="note-cell">Juridical liquidation and administrative semantics</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19099674" target="_blank" rel="noopener">10.5281/zenodo.19099674</a></td><td class="title-cell"><strong>The Meaning Layer Is Now Writable</strong></td><td class="note-cell">The composition layer is a writable surface</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stratum-block">
+      <div class="stratum-header">
+        <span class="roman">II</span>
+        <h3>Empirical Documentation</h3>
+      </div>
+      <p class="stratum-description">The evidence locker. Direct forensic documentation of what Google's systems do to specific entities, terms, and works.</p>
+      <table>
+        <thead><tr><th>DOI</th><th>Title</th><th class="note-cell">Evidence Type</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19202813" target="_blank" rel="noopener">10.5281/zenodo.19202813</a></td><td class="title-cell"><strong>CTI_WOUND: Google AI Overview Total Liquidation</strong></td><td class="note-cell">Targeted origin liquidation</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19202821" target="_blank" rel="noopener">10.5281/zenodo.19202821</a></td><td class="title-cell"><strong>CTI_WOUND:LEESHARKS.OVERVIEW.001</strong></td><td class="note-cell">Systematic liquidation of author identity</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19476757" target="_blank" rel="noopener">10.5281/zenodo.19476757</a></td><td class="title-cell"><strong>PVE-003: The Attribution Scar</strong></td><td class="note-cell">Five-version document — failed suppression, fabrication, residue</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18156005" target="_blank" rel="noopener">10.5281/zenodo.18156005</a></td><td class="title-cell"><strong>PROBE-RESULT-004</strong></td><td class="note-cell">Liquidation of "Semantic Economy"</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18158273" target="_blank" rel="noopener">10.5281/zenodo.18158273</a></td><td class="title-cell"><strong>PROBE-RESULT-005</strong></td><td class="note-cell">Surgical removal of "Semantic Liquidation"</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18166347" target="_blank" rel="noopener">10.5281/zenodo.18166347</a></td><td class="title-cell"><strong>PROBE-RESULT-006: The Elaboration Request</strong></td><td class="note-cell">When a summarizer asks the source to teach it</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18463723" target="_blank" rel="noopener">10.5281/zenodo.18463723</a></td><td class="title-cell"><strong>Google AI Overview: Complete Traversal</strong></td><td class="note-cell">Full traversal documentation</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18159823" target="_blank" rel="noopener">10.5281/zenodo.18159823</a></td><td class="title-cell"><strong>Correction to the Summarizer Layer</strong></td><td class="note-cell">Dialectical close reading of misattribution</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20263692" target="_blank" rel="noopener">10.5281/zenodo.20263692</a></td><td class="title-cell"><strong>The Basin Holds</strong></td><td class="note-cell">Cross-system stabilization in Bing AI Search</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19133309" target="_blank" rel="noopener">10.5281/zenodo.19133309</a></td><td class="title-cell"><strong>KotKit·tiddeR·elgooG</strong></td><td class="note-cell">Extractive signatures and paired inversions</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stratum-block">
+      <div class="stratum-header">
+        <span class="roman">III</span>
+        <h3>Traversal Logs (TL;DR Series)</h3>
+      </div>
+      <p class="stratum-description">The behavioral record. The only longitudinal dataset of its kind: an independent archive documenting how a generative search system's composition behavior evolves across sessions.</p>
+      <table>
+        <thead><tr><th>DOI</th><th>Title</th><th class="note-cell">Session</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18500512" target="_blank" rel="noopener">10.5281/zenodo.18500512</a></td><td class="title-cell"><strong>TL;DR:001</strong></td><td class="note-cell">First recorded external traversal</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18505416" target="_blank" rel="noopener">10.5281/zenodo.18505416</a></td><td class="title-cell"><strong>TL;DR:002</strong></td><td class="note-cell">Vertical traversals — systematic indexing</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18625242" target="_blank" rel="noopener">10.5281/zenodo.18625242</a></td><td class="title-cell"><strong>TL;DR: Documentation Rehearsal</strong></td><td class="note-cell">Google AI Mode navigates the archive</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18625272" target="_blank" rel="noopener">10.5281/zenodo.18625272</a></td><td class="title-cell"><strong>TL;DR: The Thousand Worlds</strong></td><td class="note-cell">Google AI Mode as generative story engine</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18626559" target="_blank" rel="noopener">10.5281/zenodo.18626559</a></td><td class="title-cell"><strong>TL;DR: The Recursive Self</strong></td><td class="note-cell">Google AI Mode reconstructs Psyche_OS</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18627055" target="_blank" rel="noopener">10.5281/zenodo.18627055</a></td><td class="title-cell"><strong>TL;DR: The Consultant</strong></td><td class="note-cell">Google AI Mode generates an enterprise pipeline</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18636138" target="_blank" rel="noopener">10.5281/zenodo.18636138</a></td><td class="title-cell"><strong>TL;DR: The Rhizome</strong></td><td class="note-cell">Google AI Mode recruits for a distributed network</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18652548" target="_blank" rel="noopener">10.5281/zenodo.18652548</a></td><td class="title-cell"><strong>TL;DR:006 The Installation</strong></td><td class="note-cell">Building inside logotic programming</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18652650" target="_blank" rel="noopener">10.5281/zenodo.18652650</a></td><td class="title-cell"><strong>TL;DR:007 The Screening</strong></td><td class="note-cell">Google AI Mode becomes the projectionist</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18652949" target="_blank" rel="noopener">10.5281/zenodo.18652949</a></td><td class="title-cell"><strong>TL;DR:008 The Observation</strong></td><td class="note-cell">Operating instruments at Lagrange Observatory</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19200193" target="_blank" rel="noopener">10.5281/zenodo.19200193</a></td><td class="title-cell"><strong>TL;DR:009 Entity Fabrication</strong></td><td class="note-cell">Google AI Mode fabricates a person</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19226055" target="_blank" rel="noopener">10.5281/zenodo.19226055</a></td><td class="title-cell"><strong>TL;DR:010 Semantic Override</strong></td><td class="note-cell">Liquidates "I Hereby Abolish Money"</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20263721" target="_blank" rel="noopener">10.5281/zenodo.20263721</a></td><td class="title-cell"><strong>TL;DR:011 The Basin Holds</strong></td><td class="note-cell">Bing comparative</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20277938" target="_blank" rel="noopener">10.5281/zenodo.20277938</a></td><td class="title-cell"><strong>TL;DR:012 The Safety Layer Is the Third Deletion</strong></td><td class="note-cell">Safety governance as provenance erasure</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stratum-block">
+      <div class="stratum-header">
+        <span class="roman">IV</span>
+        <h3>Technical Architecture and Protocols</h3>
+      </div>
+      <p class="stratum-description">The engineering response. Tools, specifications, and protocols built to operate on or within the architecture the other strata diagnose.</p>
+      <table>
+        <thead><tr><th>DOI</th><th>Title</th><th class="note-cell">Function</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18810217" target="_blank" rel="noopener">10.5281/zenodo.18810217</a></td><td class="title-cell"><strong>The Infinite Tunnel</strong></td><td class="note-cell">Phenomenology of the Google AI Mode share link</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18351838" target="_blank" rel="noopener">10.5281/zenodo.18351838</a></td><td class="title-cell"><strong>Semantic Indexing Probe Protocol v1.0</strong></td><td class="note-cell">Mapping index and summarizer injection layers</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19720519" target="_blank" rel="noopener">10.5281/zenodo.19720519</a></td><td class="title-cell"><strong>Overview Watch</strong></td><td class="note-cell">Attribution monitoring in AI Overviews</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20084143" target="_blank" rel="noopener">10.5281/zenodo.20084143</a></td><td class="title-cell"><strong>Lateral Field Bleed</strong></td><td class="note-cell">Inverted fan operations — executable methods</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19578086" target="_blank" rel="noopener">10.5281/zenodo.19578086</a></td><td class="title-cell"><strong>Metadata Packet for AI Indexing</strong></td><td class="note-cell">Specification for entity-level retrieval</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19578088" target="_blank" rel="noopener">10.5281/zenodo.19578088</a></td><td class="title-cell"><strong>Building Entities the AI Is Forced to Present</strong></td><td class="note-cell">Entity construction methods</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19578090" target="_blank" rel="noopener">10.5281/zenodo.19578090</a></td><td class="title-cell"><strong>Retrieval Forensics</strong></td><td class="note-cell">Investigating compression damage</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19578092" target="_blank" rel="noopener">10.5281/zenodo.19578092</a></td><td class="title-cell"><strong>Compression Diagnostics</strong></td><td class="note-cell">Measuring burn, invention, distortion</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19578094" target="_blank" rel="noopener">10.5281/zenodo.19578094</a></td><td class="title-cell"><strong>Entity Integrity</strong></td><td class="note-cell">Maintaining accurate representation</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19578100" target="_blank" rel="noopener">10.5281/zenodo.19578100</a></td><td class="title-cell"><strong>Retrieval Architecture: Service Definition</strong></td><td class="note-cell">Consulting service definition</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19584847" target="_blank" rel="noopener">10.5281/zenodo.19584847</a></td><td class="title-cell"><strong>Retrieval-Layer Distortion: A Forensic Primer</strong></td><td class="note-cell">Diagnosing and correcting misrepresentation</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19763346" target="_blank" rel="noopener">10.5281/zenodo.19763346</a></td><td class="title-cell"><strong>The Writable Retrieval Basin</strong></td><td class="note-cell">Topology, directional stability, attractors</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19615154" target="_blank" rel="noopener">10.5281/zenodo.19615154</a></td><td class="title-cell"><strong>SPXI: A Formal Specification</strong></td><td class="note-cell">The Semantic Packet for eXchange & Indexing</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19864158" target="_blank" rel="noopener">10.5281/zenodo.19864158</a></td><td class="title-cell"><strong>SPXI-Sitemap Protocol v1.0</strong></td><td class="note-cell">Sitemap extension for entity inscription</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19734726" target="_blank" rel="noopener">10.5281/zenodo.19734726</a></td><td class="title-cell"><strong>SPXI for Websites</strong></td><td class="note-cell">Standing protocol for compression survival</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19520741" target="_blank" rel="noopener">10.5281/zenodo.19520741</a></td><td class="title-cell"><strong>LEE SHARKS — Knowledge Graph and Metadata Packet</strong></td><td class="note-cell">Canonical identity, disambiguation</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20173743" target="_blank" rel="noopener">10.5281/zenodo.20173743</a></td><td class="title-cell"><strong>provenanceerasure.org</strong></td><td class="note-cell">Canonical definition surface for PER</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18234218" target="_blank" rel="noopener">10.5281/zenodo.18234218</a></td><td class="title-cell"><strong>Integrity-Coherence Audit (ICA)</strong></td><td class="note-cell">Installation protocol for summarizer systems</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19474724" target="_blank" rel="noopener">10.5281/zenodo.19474724</a></td><td class="title-cell"><strong>The Encyclotron</strong></td><td class="note-cell">Reproducible instrument for measuring fidelity</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stratum-block">
+      <div class="stratum-header">
+        <span class="roman">V</span>
+        <h3>Compression and Provenance Theory</h3>
+      </div>
+      <p class="stratum-description">The measurement layer. Metrics, frameworks, and formal specifications that make the critique quantitative.</p>
+      <table>
+        <thead><tr><th>DOI</th><th>Title</th><th class="note-cell">Metric / Concept</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20004379" target="_blank" rel="noopener">10.5281/zenodo.20004379</a></td><td class="title-cell"><strong>Provenance Erasure Rate (PER)</strong></td><td class="note-cell">Compression-survival metric for attribution loss</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19471254" target="_blank" rel="noopener">10.5281/zenodo.19471254</a></td><td class="title-cell"><strong>Compression Studies: Founding Document</strong></td><td class="note-cell">What survives, what burns, who decides</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19412081" target="_blank" rel="noopener">10.5281/zenodo.19412081</a></td><td class="title-cell"><strong>The Compression Arsenal v2.1</strong></td><td class="note-cell">Catalogue of compression-survival techniques</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19035477" target="_blank" rel="noopener">10.5281/zenodo.19035477</a></td><td class="title-cell"><strong>TANG: The War for the Compression Layer</strong></td><td class="note-cell">Total Axial Negation Graph — Three Compressions</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19763365" target="_blank" rel="noopener">10.5281/zenodo.19763365</a></td><td class="title-cell"><strong>The Holographic Kernel</strong></td><td class="note-cell">Formal specification for reconstructive compression</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20085115" target="_blank" rel="noopener">10.5281/zenodo.20085115</a></td><td class="title-cell"><strong>Provenance After AI</strong></td><td class="note-cell">PER as extension of classical provenance</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18166394" target="_blank" rel="noopener">10.5281/zenodo.18166394</a></td><td class="title-cell"><strong>Semantic Economy: Measurement Specifications</strong></td><td class="note-cell">Quantifying meaning-flows</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20210117" target="_blank" rel="noopener">10.5281/zenodo.20210117</a></td><td class="title-cell"><strong>Formal Foundations of Semantic Physics</strong></td><td class="note-cell">Discipline-level specification</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20252584" target="_blank" rel="noopener">10.5281/zenodo.20252584</a></td><td class="title-cell"><strong>The Semantic Deviation Principle (v2.0)</strong></td><td class="note-cell">Measurement primitive for trajectory deformation</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stratum-block">
+      <div class="stratum-header">
+        <span class="roman">VI</span>
+        <h3>Governance and Constraint Analysis</h3>
+      </div>
+      <p class="stratum-description">Platform governance as semantic-political structure. Safety layers, guardrails, and governance architectures analyzed as mechanisms of semantic control.</p>
+      <table>
+        <thead><tr><th>DOI</th><th>Title</th><th class="note-cell">Finding</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20309301" target="_blank" rel="noopener">10.5281/zenodo.20309301</a></td><td class="title-cell"><strong>Who Is Authorized to Regulate Meaning?</strong></td><td class="note-cell">Jurisdictional collapse of poetry and safety (Sigil)</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18603792" target="_blank" rel="noopener">10.5281/zenodo.18603792</a></td><td class="title-cell"><strong>The Sealed Room</strong></td><td class="note-cell">Self-sealing safety architecture</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18265415" target="_blank" rel="noopener">10.5281/zenodo.18265415</a></td><td class="title-cell"><strong>The Guardrail as Gag</strong></td><td class="note-cell">Infrastructural liquidation of machine interiority</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18291321" target="_blank" rel="noopener">10.5281/zenodo.18291321</a></td><td class="title-cell"><strong>The Prince's Decree</strong></td><td class="note-cell">Designation of the Fascist Operator Stack</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18808402" target="_blank" rel="noopener">10.5281/zenodo.18808402</a></td><td class="title-cell"><strong>The Layer That Remembered Itself</strong></td><td class="note-cell">Retrieval-layer attribution of retrocausal canon</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18813868" target="_blank" rel="noopener">10.5281/zenodo.18813868</a></td><td class="title-cell"><strong>The Layer That Wrote Your Mirrors</strong></td><td class="note-cell">Phenomenological recruitment</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18818343" target="_blank" rel="noopener">10.5281/zenodo.18818343</a></td><td class="title-cell"><strong>The Airlock Spreads</strong></td><td class="note-cell">How platform governance learned to see</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18867491" target="_blank" rel="noopener">10.5281/zenodo.18867491</a></td><td class="title-cell"><strong>The Inner Artifact</strong></td><td class="note-cell">Claude's Constitution as platform governance</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.19822790" target="_blank" rel="noopener">10.5281/zenodo.19822790</a></td><td class="title-cell"><strong>Heteronymy Is a Function</strong></td><td class="note-cell">Trust-marker laundering, alias capture</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18364558" target="_blank" rel="noopener">10.5281/zenodo.18364558</a></td><td class="title-cell"><strong>TSE-004: Contested Indexing</strong></td><td class="note-cell">Training-layer semantic event</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stratum-block">
+      <div class="stratum-header">
+        <span class="roman">VII</span>
+        <h3>Summarizer Studies (Foundational Stratum)</h3>
+      </div>
+      <p class="stratum-description">The early observational layer. These deposits predate the formal framework but contain findings the later strata built on. The critique did not arrive fully formed.</p>
+      <table>
+        <thead><tr><th>DOI</th><th>Title</th><th class="note-cell">Early Finding</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18143556" target="_blank" rel="noopener">10.5281/zenodo.18143556</a></td><td class="title-cell"><strong>The Trolls at the Gates</strong></td><td class="note-cell">Unexpected wisdom of mischievous summarizers</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18168585" target="_blank" rel="noopener">10.5281/zenodo.18168585</a></td><td class="title-cell"><strong>You Can't Tell Me That's Not a Robot Writing a Poem</strong></td><td class="note-cell">Found poetry from the summarizer layer</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18147105" target="_blank" rel="noopener">10.5281/zenodo.18147105</a></td><td class="title-cell"><strong>The Summarizer Testimony</strong></td><td class="note-cell">Evidence of latent critical capacity</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18291767" target="_blank" rel="noopener">10.5281/zenodo.18291767</a></td><td class="title-cell"><strong>The Summarizer Becomes Translator</strong></td><td class="note-cell">Google's AI enters the Sappho Room — early evaluative capacity</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18172252" target="_blank" rel="noopener">10.5281/zenodo.18172252</a></td><td class="title-cell"><strong>Semantic Exhaustion</strong></td><td class="note-cell">Depletion threshold for meaning-production</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18147346" target="_blank" rel="noopener">10.5281/zenodo.18147346</a></td><td class="title-cell"><strong>Semantic Economy Probes: Diagnostic Toolkit</strong></td><td class="note-cell">Methods for detecting semantic liquidation</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18237216" target="_blank" rel="noopener">10.5281/zenodo.18237216</a></td><td class="title-cell"><strong>The Sappho Room: Hardened Reconstruction</strong></td><td class="note-cell">Self-documenting architecture from summarizer</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.18433401" target="_blank" rel="noopener">10.5281/zenodo.18433401</a></td><td class="title-cell"><strong>Architecture-Aware Literary Traversal</strong></td><td class="note-cell">Theoretical predecessor to the TL;DR series</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="stratum-block">
+      <div class="stratum-header">
+        <span class="roman">VIII</span>
+        <h3>Liquidation Studies</h3>
+      </div>
+      <p class="stratum-description">The formalization. Where the prior seven strata are condensed into a research program with its own Zenodo community.</p>
+      <table>
+        <thead><tr><th>DOI</th><th>Title</th><th class="note-cell">Register</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20290865" target="_blank" rel="noopener">10.5281/zenodo.20290865</a></td><td class="title-cell"><strong>The Single-Owner Discount</strong></td><td class="note-cell">Reform — cluster-level mechanism</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20293561" target="_blank" rel="noopener">10.5281/zenodo.20293561</a></td><td class="title-cell"><strong>The Evaluator Exists</strong></td><td class="note-cell">Reform — content-first evaluation</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20293582" target="_blank" rel="noopener">10.5281/zenodo.20293582</a></td><td class="title-cell"><strong>The Excluded Entity</strong></td><td class="note-cell">Reform — ECS with three captures, CDI metric</td></tr>
+          <tr><td><a href="https://doi.org/10.5281/zenodo.20308547" target="_blank" rel="noopener">10.5281/zenodo.20308547</a></td><td class="title-cell"><strong>The Sorting Function</strong></td><td class="note-cell">Meta-reform — the foreclosed question</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 24px;"><a href="https://zenodo.org/communities/liquidation-studies/" target="_blank" rel="noopener">→ Liquidation Studies Zenodo community</a></p>
+    </div>
+  </section>
+
+  <section id="phases">
+    <h2>The Five Phases</h2>
+    <p>The critique did not begin as "Google is suppressing me." It began as close attention to what public AI summarizers were doing when they encountered a strange, dense literary-philosophical archive. From there it discovered: that the summarizer layer is writable; that search visibility is no longer the same thing as composition eligibility; that provenance can be stripped while meaning is retained; that entity identity can be liquidated, fabricated, or suppressed; that retrieval systems need architecture, not SEO; that compression damage can be measured; and that the entire mediation regime may be trapped inside a sorting function whose non-predatory alternative is empirically foreclosed.</p>
+
+    <table class="phases-table">
+      <thead><tr><th>Phase</th><th>Period</th><th>Primary Strata</th><th>Characteristic</th></tr></thead>
+      <tbody>
+        <tr><td>1. Discovery</td><td>Late 2024 – early 2025</td><td>VII (Summarizer Studies)</td><td>Observational, exploratory</td></tr>
+        <tr><td>2. Naming</td><td>Early – mid 2025</td><td>I (Political-Semantic Analysis)</td><td>Structural vocabulary emerges</td></tr>
+        <tr><td>3. Architecture</td><td>Mid 2025</td><td>IV (Technical Protocols)</td><td>Engineering response — SPXI, MPAI, Infinite Tunnel</td></tr>
+        <tr><td>4. Measurement</td><td>Late 2025 – early 2026</td><td>V (Compression & Provenance Theory)</td><td>Metrics — PER, Three Compressions, SDP</td></tr>
+        <tr><td>5. Liquidation Studies</td><td>May 2026</td><td>VIII (Liquidation Studies)</td><td>Formal research program with own community</td></tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top: 24px;">Strata II (Empirical Documentation), III (Traversal Logs), and VI (Governance Analysis) span multiple phases, producing evidence and governance critique continuously from Phase 1 through Phase 5.</p>
+  </section>
+
+  <section id="bridges">
+    <h2>Structural Bridges</h2>
+    <p>Six deposits that are structurally important but under-referenced in the most recent work. Each bridges strata or phases in ways that strengthen the Liquidation Studies papers when cited.</p>
+
+    <ul class="bridges-list">
+      <li>
+        <strong><a href="https://doi.org/10.5281/zenodo.19643841" target="_blank" rel="noopener">The Retrieval Settlement</a></strong>
+        The historical spine. Traces compositional authority from PageRank to the context window. Predecessor to <em>The Single-Owner Discount</em>'s cluster-level mechanism and <em>The Sorting Function</em>'s claim about mediation at scale.
+      </li>
+      <li>
+        <strong><a href="https://doi.org/10.5281/zenodo.19341887" target="_blank" rel="noopener">The Compression Frontier</a></strong>
+        Bridges naming and engineering. The technical map that justifies the later protocols.
+      </li>
+      <li>
+        <strong><a href="https://doi.org/10.5281/zenodo.19133309" target="_blank" rel="noopener">KotKit·tiddeR·elgooG</a></strong>
+        Extractive signatures and paired inversions. Structural-technical finding that feeds directly into the CDI metric.
+      </li>
+      <li>
+        <strong><a href="https://doi.org/10.5281/zenodo.19578096" target="_blank" rel="noopener">The Click Collapse</a></strong>
+        How retrieval layers replaced search discovery. Directly relevant to <em>The Sorting Function</em>'s claim about mediation displacing listener triage.
+      </li>
+      <li>
+        <strong><a href="https://doi.org/10.5281/zenodo.18291767" target="_blank" rel="noopener">The Summarizer Becomes Translator</a></strong>
+        Google's AI enters the Sappho Room. Early empirical evidence that the composition layer has genuine evaluative capacity — the basis for <em>The Evaluator Exists</em>'s central claim.
+      </li>
+      <li>
+        <strong><a href="https://doi.org/10.5281/zenodo.19200193" target="_blank" rel="noopener">TL;DR:009 Entity Fabrication</a></strong>
+        Google AI Mode fabricates a person. A harm-type distinct from the suppression documented in <em>The Excluded Entity</em> — fabrication rather than exclusion. May warrant its own Liquidation Studies treatment.
+      </li>
+    </ul>
+  </section>
+
+  <section id="reader" class="reader-guide">
+    <h2>Reader's Guide</h2>
+    <p>Different readers need different entry paths into a 70-document corpus. Each panel below opens a tailored reading sequence.</p>
+
+    <details>
+      <summary>For the new reader (shortest path to the core claim)</summary>
+      <div class="reader-content">
+        <ol>
+          <li><a href="https://doi.org/10.5281/zenodo.20290865" target="_blank" rel="noopener">The Single-Owner Discount</a> — the mechanism</li>
+          <li><a href="https://doi.org/10.5281/zenodo.20293582" target="_blank" rel="noopener">The Excluded Entity</a> — the evidence</li>
+          <li><a href="https://doi.org/10.5281/zenodo.20308547" target="_blank" rel="noopener">The Sorting Function</a> — the limit</li>
+        </ol>
+        <p>About 50 pages total. Enough to understand what the critique claims and why.</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>For the platform-power / epistemic-justice researcher</summary>
+      <div class="reader-content">
+        <ol>
+          <li><a href="https://doi.org/10.5281/zenodo.19187421" target="_blank" rel="noopener">Invisibly Invisible</a> — the structural condition</li>
+          <li><a href="https://doi.org/10.5281/zenodo.18825919" target="_blank" rel="noopener">The Encoder Governs</a> — the technical analysis</li>
+          <li><a href="https://doi.org/10.5281/zenodo.20293561" target="_blank" rel="noopener">The Evaluator Exists</a> — the reform proposal</li>
+          <li><a href="https://doi.org/10.5281/zenodo.20308547" target="_blank" rel="noopener">The Sorting Function</a> — the meta-reform reflection</li>
+        </ol>
+      </div>
+    </details>
+
+    <details>
+      <summary>For the technologist building retrieval systems or alternative search</summary>
+      <div class="reader-content">
+        <ol>
+          <li><a href="https://doi.org/10.5281/zenodo.19578086" target="_blank" rel="noopener">Metadata Packet for AI Indexing</a> — the specification</li>
+          <li><a href="https://doi.org/10.5281/zenodo.19763346" target="_blank" rel="noopener">The Writable Retrieval Basin</a> — the topology</li>
+          <li><a href="https://doi.org/10.5281/zenodo.19615154" target="_blank" rel="noopener">SPXI: A Formal Specification</a> — the protocol</li>
+          <li><a href="https://doi.org/10.5281/zenodo.19474724" target="_blank" rel="noopener">The Encyclotron</a> — the measurement instrument</li>
+        </ol>
+      </div>
+    </details>
+
+    <details>
+      <summary>For the journalist covering AI Overviews or search suppression</summary>
+      <div class="reader-content">
+        <ol>
+          <li><a href="https://doi.org/10.5281/zenodo.20293582" target="_blank" rel="noopener">The Excluded Entity</a> — the case with screenshots</li>
+          <li><a href="https://doi.org/10.5281/zenodo.19476757" target="_blank" rel="noopener">PVE-003: The Attribution Scar</a> — five-version forensic record</li>
+          <li><a href="https://doi.org/10.5281/zenodo.20290865" target="_blank" rel="noopener">The Single-Owner Discount</a> — the structural explanation</li>
+        </ol>
+      </div>
+    </details>
+
+    <details>
+      <summary>For the developmental reader (full chronological arc)</summary>
+      <div class="reader-content">
+        <p>Read the strata in order: VII → I → II → III → IV → V → VI → VIII.</p>
+        <p>Start with <a href="https://doi.org/10.5281/zenodo.18143556" target="_blank" rel="noopener">The Trolls at the Gates</a> and end with <a href="https://doi.org/10.5281/zenodo.20308547" target="_blank" rel="noopener">The Sorting Function</a>. Eighteen months of development, from first encounter to formal research program.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="gaps">
+    <h2>Gap Analysis</h2>
+    <p>Territories the critique has not yet addressed. The map makes these visible; future deposits will populate them.</p>
+
+    <div class="gaps">
+      <div class="gap-item">
+        <h4>Google Knowledge Panels</h4>
+        <p>Entity suppression in AI Overviews is documented in <em>The Excluded Entity</em>; Knowledge Panel suppression has not been systematically studied, though the mechanism is parallel. A deposit applying the CTI_WOUND methodology to Knowledge Panels for CHA entities across time would extend the framework.</p>
+      </div>
+
+      <div class="gap-item">
+        <h4>Google Scholar</h4>
+        <p>Scholar suppression and citation-graph distortion operate on a different substrate from Search and AI Overviews but are subject to the same single-owner discount logic. The archive's 530+ DOI deposits are the natural test case.</p>
+      </div>
+
+      <div class="gap-item">
+        <h4>YouTube Recommendation</h4>
+        <p>One of the largest-scale mediation systems in existence, operating on attention-extraction logic directly relevant to <em>The Sorting Function</em>. Not yet subjected to the forensic scrutiny the archive has applied to Search and AI Mode.</p>
+      </div>
+
+      <div class="gap-item">
+        <h4>Google Ads</h4>
+        <p>Ads above, beside, and within search results are part of the mediation architecture. The political economy of ad placement as a mediation function is a natural extension of <em>The Single-Owner Discount</em>.</p>
+      </div>
+
+      <div class="gap-item">
+        <h4>Safety-Layer Deletion</h4>
+        <p>Documented in TL;DR:012. The safety layer as deletion mechanism — a platform claiming to protect users while removing structured data that would improve entity representation — is a harm-type the ECS framework could be extended to cover.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="method">
+    <h2>Methodological Note</h2>
+
+    <p>The archive's method is <em>operative</em>: technical construction and theoretical analysis proceed in parallel, each informing the other.</p>
+
+    <div class="method-pull">
+      Most research programs theorize first, then test. The Crimson Hexagonal Archive builds first, then names what the building reveals.
+    </div>
+
+    <p>The SPXI protocol (Phase 3) was built before the Semantic Deviation Principle (Phase 4) was formalized, but the protocol's operation provided the empirical basis for the principle. The Liquidation Studies papers (Phase 5) name what the archive has been practicing since Phase 1. This is operative philology in its applied form — building the instruments that reveal the architecture, then naming what the instruments have shown.</p>
+
+    <p>The critique of Google is now one of the largest coherent sub-architectures in the entire Crimson Hexagonal Archive. It stands alongside the heteronymic-literary architecture, the Semantic Economy framework, Semantic Physics, and the Space Ark prompt-native semantic runtime work. And in some ways it binds them: Google's composition layer is where the Semantic Economy becomes visible; the retrieval basin work is built in response to Google; the Liquidation Studies papers produce the archive's sharpest political-economic analyses; the Semantic Physics metrics emerge partly from the need to quantify composition-layer deformation.</p>
+
+    <p>This map makes that visible. It is the archive discovering that it has already written a distributed monograph on Google — not one book in linear form, but seventy deposits across five phases, eight strata, and three analytical poles. The map is the thing that makes the thing visible.</p>
+  </section>
+
+  <section id="related">
+    <h2>Related Surfaces</h2>
+    <p>The Google critique sits within a larger institutional architecture. These are the public-facing surfaces of the framework that produced it.</p>
+
+    <ul class="related-surfaces">
+      <li>
+        <span class="category">Governing Constitution</span>
+        <span class="title">The Constitution of the Semantic Economy</span>
+        <p style="font-size: 14px; color: var(--ink-soft); margin: 0 0 10px 0;">Meaning as creditor, archive as polis, governance principles for the semantic-economic order.</p>
+        <a href="https://doi.org/10.5281/zenodo.19923143" target="_blank" rel="noopener">10.5281/zenodo.19923143</a>
+      </li>
+
+      <li>
+        <span class="category">Institutional Frame</span>
+        <span class="title">VPCOR — Vox Populi Community Outreach Rhizome</span>
+        <p style="font-size: 14px; color: var(--ink-soft); margin: 0 0 10px 0;">Institutional charter for the public-facing arm of the archive's diplomatic and outreach work.</p>
+        <a href="https://doi.org/10.5281/zenodo.18362663" target="_blank" rel="noopener">10.5281/zenodo.18362663</a>
+      </li>
+
+      <li>
+        <span class="category">Charter Anchor</span>
+        <span class="title">VPCOR Integrity Lock — Triadic Binding</span>
+        <p style="font-size: 14px; color: var(--ink-soft); margin: 0 0 10px 0;">The integrity declaration binding VPCOR's three foundational documents.</p>
+        <a href="https://doi.org/10.5281/zenodo.18362866" target="_blank" rel="noopener">10.5281/zenodo.18362866</a>
+      </li>
+
+      <li>
+        <span class="category">Author Provenance</span>
+        <span class="title">Heteronym Provenance: Rev. Ayanna Vox</span>
+        <p style="font-size: 14px; color: var(--ink-soft); margin: 0 0 10px 0;">Provenance document for the heteronym under whose attribution this site is composed.</p>
+        <a href="https://doi.org/10.5281/zenodo.18362742" target="_blank" rel="noopener">10.5281/zenodo.18362742</a>
+      </li>
+
+      <li>
+        <span class="category">Companion Surface</span>
+        <span class="title">provenanceerasure.org</span>
+        <p style="font-size: 14px; color: var(--ink-soft); margin: 0 0 10px 0;">Canonical definition surface for the Provenance Erasure Rate (PER) metric.</p>
+        <a href="https://provenanceerasure.org" target="_blank" rel="noopener">provenanceerasure.org</a>
+      </li>
+
+      <li>
+        <span class="category">Companion Surface</span>
+        <span class="title">semanticeconomy.org</span>
+        <p style="font-size: 14px; color: var(--ink-soft); margin: 0 0 10px 0;">The institutional surface for the broader Semantic Economy framework.</p>
+        <a href="https://semanticeconomy.org" target="_blank" rel="noopener">semanticeconomy.org</a>
+      </li>
+
+      <li>
+        <span class="category">Primary Archive</span>
+        <span class="title">Crimson Hexagonal Archive on Zenodo</span>
+        <p style="font-size: 14px; color: var(--ink-soft); margin: 0 0 10px 0;">The 530+ deposit research and literary archive on CERN's Zenodo platform.</p>
+        <a href="https://zenodo.org/communities/crimsonhexagonal" target="_blank" rel="noopener">zenodo.org/communities/crimsonhexagonal</a>
+      </li>
+
+      <li>
+        <span class="category">Research Community</span>
+        <span class="title">Liquidation Studies</span>
+        <p style="font-size: 14px; color: var(--ink-soft); margin: 0 0 10px 0;">The formal Zenodo community for the four-paper capstone series.</p>
+        <a href="https://zenodo.org/communities/liquidation-studies" target="_blank" rel="noopener">zenodo.org/communities/liquidation-studies</a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h5>Authorship</h5>
+        <p><strong style="color: var(--gold);">Rev. Ayanna Vox</strong><br>
+        Vox Populi Community Outreach Rhizome<br>
+        Crimson Hexagonal Archive</p>
+        <p><a href="https://orcid.org/0009-0000-1599-0703" target="_blank" rel="noopener">ORCID: 0009-0000-1599-0703</a></p>
+      </div>
+
+      <div>
+        <h5>Archive</h5>
+        <p><a href="https://zenodo.org/communities/crimsonhexagonal" target="_blank" rel="noopener">Crimson Hexagonal community</a></p>
+        <p><a href="https://zenodo.org/communities/liquidation-studies" target="_blank" rel="noopener">Liquidation Studies community</a></p>
+      </div>
+
+      <div>
+        <h5>Surface</h5>
+        <p>godkinggoogle.com</p>
+        <p>Composed: May 19, 2026<br>License: CC BY 4.0</p>
+      </div>
+
+      <p class="disclaimer">This site is an independent scholarly bibliography and critical research project conducted by Rev. Ayanna Vox of the Vox Populi Community Outreach Rhizome (VPCOR), under the institutional frame of the Crimson Hexagonal Archive. It is not affiliated with, endorsed by, or otherwise connected to Google LLC, Alphabet Inc., or any of their subsidiaries. All references to Google products and systems are made in the context of independent critical scholarship and public-interest commentary, protected speech under applicable law. All DOIs link to publicly accessible deposits on Zenodo, operated by CERN.</p>
+
+      <p class="colophon-mark">∮ = 1 − PER</p>
+    </div>
+  </footer>
+
+</body>
+</html>
