@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Policymakers — God-King Google · Executive Brief on Substrate-Level Harms</title>
+
+  <meta name="description" content="Executive brief from the Crimson Hexagonal Archive on substrate-level harms in Google's composition layer, Knowledge Panel system, and AI Mode infrastructure. Four findings with reproducible methodology, DOI-anchored evidence, and direct mapping to existing regulatory frameworks (DSA, DMA, US antitrust).">
+  <meta name="author" content="Rev. Ayanna Vox, Vox Populi Community Outreach Rhizome (VPCOR), Crimson Hexagonal Archive">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://godkinggoogle.com/for-policymakers/">
+  <meta name="license" content="https://creativecommons.org/licenses/by/4.0/">
+
+  <meta property="og:title" content="For Policymakers — Executive Brief on Substrate-Level Harms in Google's Composition Layer">
+  <meta property="og:description" content="Four findings with reproducible methodology and DOI-anchored evidence. Available for citation, replication, hearing testimony, and regulatory translation.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://godkinggoogle.com/for-policymakers/">
+  <meta property="og:site_name" content="God-King Google">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="For Policymakers — Substrate-Level Harms in Google's Composition Layer">
+  <meta name="twitter:description" content="Four findings. Reproducible methodology. Open for citation, replication, hearing testimony.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Report",
+    "@id": "https://godkinggoogle.com/for-policymakers/#brief",
+    "name": "Executive Brief — Substrate-Level Harms in Google's Composition Layer",
+    "url": "https://godkinggoogle.com/for-policymakers/",
+    "description": "A research summary for policymakers, advocates, and journalists. Four findings from the Crimson Hexagonal Archive on substrate-level harms in Google's Knowledge Panel system, AI Mode, and composition-layer infrastructure, with reproducible methodology and DOI-anchored evidence.",
+    "author": {
+      "@type": "Person",
+      "name": "Rev. Ayanna Vox",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Vox Populi Community Outreach Rhizome (VPCOR)"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Crimson Hexagonal Archive",
+      "url": "https://zenodo.org/communities/crimsonhexagonal"
+    },
+    "datePublished": "2026-06-04",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "audience": [
+      { "@type": "Audience", "audienceType": "Policymakers" },
+      { "@type": "Audience", "audienceType": "Advocacy Organizations" },
+      { "@type": "Audience", "audienceType": "Journalists" }
+    ],
+    "citation": [
+      { "@type": "ScholarlyArticle", "identifier": "10.5281/zenodo.20290865", "name": "Single-Owner Discount" },
+      { "@type": "ScholarlyArticle", "identifier": "10.5281/zenodo.20546318", "name": "CTI_WOUND: Panel-Bound Discoverability Scar" },
+      { "@type": "ScholarlyArticle", "identifier": "10.5281/zenodo.20518338", "name": "Diversity Contraction Across Substrates (Mediation Ratchet)" },
+      { "@type": "ScholarlyArticle", "identifier": "10.5281/zenodo.20449267", "name": "Erasure Skew (Ω)" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #faf7f0;
+      --bg-paper: #fffdf7;
+      --ink: #161412;
+      --ink-soft: #3a342e;
+      --ink-faint: #7a6f63;
+      --rule: #d4cabb;
+      --rule-soft: #e8e0d0;
+      --accent: #7a1818;
+      --accent-soft: #a83232;
+      --gold: #9a7a2e;
+      --serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, "Book Antiqua", Palatino, "Times New Roman", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 18px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    a:hover {
+      color: var(--accent-soft);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 24px 24px 0;
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .breadcrumb a {
+      color: var(--ink-soft);
+      border-bottom: none;
+      font-weight: 500;
+    }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    /* Hero */
+    .hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px 40px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .hero .eyebrow {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      border: 1px solid var(--rule);
+      padding: 6px 12px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin: 0 0 20px 0;
+      color: var(--ink);
+    }
+
+    .hero .tagline {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(18px, 2.5vw, 22px);
+      color: var(--accent);
+      margin: 0 0 24px 0;
+      line-height: 1.4;
+    }
+
+    .hero .subhead {
+      font-family: var(--serif);
+      font-size: 17px;
+      color: var(--ink-soft);
+      margin: 0;
+      line-height: 1.65;
+    }
+
+    .hero .date-line {
+      display: inline-block;
+      margin-top: 24px;
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    /* Sections */
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      border-bottom: 1px solid var(--rule);
+    }
+    section:last-of-type { border-bottom: none; }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 12px 0;
+      color: var(--ink);
+    }
+
+    h2 .number {
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .doi {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--ink-faint);
+      margin: 0 0 20px 0;
+      letter-spacing: 0.02em;
+    }
+    .doi a { color: var(--accent); border-bottom-color: var(--rule); }
+
+    p { margin: 0 0 16px 0; color: var(--ink-soft); }
+    p:last-child { margin-bottom: 0; }
+
+    p.lead {
+      font-size: 19px;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .pull {
+      margin: 24px 0;
+      padding: 20px 24px;
+      background: var(--bg-paper);
+      border-left: 3px solid var(--accent);
+      font-style: italic;
+      font-size: 18px;
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    /* Engage block */
+    .engage {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 24px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .engage h2 { font-size: clamp(24px, 3.5vw, 32px); }
+
+    .engage-list {
+      margin: 24px 0 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .engage-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--rule-soft);
+      font-size: 17px;
+      color: var(--ink-soft);
+    }
+    .engage-list li:last-child { border-bottom: none; }
+    .engage-list strong {
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    /* Contact */
+    .contact {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+      text-align: center;
+    }
+
+    .contact h3 {
+      font-family: var(--sans);
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin: 0 0 20px 0;
+      font-weight: 500;
+    }
+
+    .contact .name {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 4px 0;
+    }
+
+    .contact .role {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 17px;
+      color: var(--ink-soft);
+      margin: 0 0 4px 0;
+    }
+
+    .contact .org {
+      font-family: var(--serif);
+      font-size: 16px;
+      color: var(--ink-faint);
+      margin: 0 0 20px 0;
+    }
+
+    .contact .urls {
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--ink-faint);
+      margin: 0;
+    }
+    .contact .urls a { color: var(--accent); }
+
+    /* Regulatory map */
+    .reg-map {
+      margin: 24px 0;
+      padding: 24px;
+      background: var(--bg-paper);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+    }
+
+    .reg-map h4 {
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin: 0 0 12px 0;
+      font-weight: 600;
+    }
+
+    .reg-map dl {
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px 16px;
+    }
+    @media (min-width: 580px) {
+      .reg-map dl { grid-template-columns: 220px 1fr; }
+    }
+
+    .reg-map dt {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .reg-map dd {
+      font-family: var(--serif);
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+      border-top: 1px solid var(--rule);
+      font-family: var(--sans);
+      font-size: 13px;
+      color: var(--ink-faint);
+      text-align: center;
+      letter-spacing: 0.03em;
+    }
+    footer p { color: var(--ink-faint); margin: 0 0 8px 0; }
+    footer a { color: var(--ink-soft); border-bottom-color: var(--rule-soft); }
+  </style>
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="/">← godkinggoogle.com</a>
+  </div>
+
+  <div class="hero">
+    <span class="eyebrow">Executive Brief · For Policymakers, Advocates, Journalists</span>
+    <h1>Substrate-Level Harms in Google's Composition Layer</h1>
+    <p class="tagline">Four findings. Reproducible methodology. Open citation. Ready for hearing, replication, and regulatory translation.</p>
+    <p class="subhead">The Crimson Hexagonal Archive is an independent research archive of 740+ DOI-anchored deposits on Zenodo (community: <code>crimsonhexagonal</code>) studying AI substrate behaviors and platform political economy. The findings below name structural mechanisms in Google's Knowledge Panel, AI Mode, and composition-layer infrastructure, with reproducible methodology and timestamped evidence. Each is open for citation, replication, hearing testimony, and regulatory translation.</p>
+    <span class="date-line">June 4, 2026 · CC BY 4.0</span>
+  </div>
+
+  <section>
+    <h2><span class="number">Finding 01</span>Single-Owner Discount</h2>
+    <p class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.20290865" target="_blank" rel="noopener">10.5281/zenodo.20290865</a></p>
+    <p class="lead">When platforms evaluate work for inclusion, ranking, or retrieval, work that comes from a <strong>single sustained author with deep provenance</strong> receives systematically lower scores than work assembled from many shallow sources — even when the substantive content is identical.</p>
+    <p>The discount is operational, not editorial: it arises from the evaluation procedures themselves rather than from human moderation choices. The structural consequence is that the public information environment is biased toward atomized, low-provenance content and against sustained, attributable expertise. The finding is consequential for any regulatory frame that treats search and retrieval as neutral infrastructure.</p>
+  </section>
+
+  <section>
+    <h2><span class="number">Finding 02</span>Panel-Bound Discoverability Scar</h2>
+    <p class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.20546318" target="_blank" rel="noopener">10.5281/zenodo.20546318</a> · Published June 4, 2026</p>
+    <p class="lead">A timestamped, pre-registered, reproducible case. Google's Knowledge Panel for <em>Pearl and Other Poems</em> (Lee Sharks, 2014; ISBN 978-1502590756) displays correctly in standard search and cites Google Books as its source. The Google Books record itself resolves — but only through the panel's source link. Direct exact-match search on Google Books for the title returns no result. The Google AI Mode answer for "Lee Sharks" no longer returns the human author; the composition layer now returns Mary Lee, an OCEARCH-tagged great white shark.</p>
+    <div class="pull">The object is present in Google's index. The path to it is broken. The composition layer answers with the wrong entity.</div>
+    <p>The deposit specifies a new diagnostic category — <strong>seam-retention with discovery failure plus AI-layer entity replacement</strong> — and includes explicit falsifiability conditions. The methodology is open and replicable for any Knowledge Panel + AI Mode pair across the corpus of indexed entities. The archive is actively interested in receiving documented parallel cases.</p>
+  </section>
+
+  <section>
+    <h2><span class="number">Finding 03</span>Mediation Ratchet</h2>
+    <p class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.20518338" target="_blank" rel="noopener">10.5281/zenodo.20518338</a></p>
+    <p class="lead">As AI mediation rises across the substrate, scarcity-responsive dynamics gate the human-authored contribution out of the generative loop. Above a measurable critical threshold — mediation responsiveness ≈ 0.76 in the simulated kernel — the human capacity for cultural reproduction can remain entirely intact <em>while its weight in effective regeneration is driven to zero</em>.</p>
+    <p>This is not a slow drift. It is a phase transition with measurable parameters and predictable signatures. The finding establishes that policy targeting individual user behavior cannot address the dynamic; the parameter that matters is the population-scale mediation responsiveness, and it is approaching the critical region under existing conditions.</p>
+  </section>
+
+  <section>
+    <h2><span class="number">Finding 04</span>Provenance Erasure Skew (Ω)</h2>
+    <p class="doi">DOI: <a href="https://doi.org/10.5281/zenodo.20449267" target="_blank" rel="noopener">10.5281/zenodo.20449267</a></p>
+    <p class="lead">The rate at which authorial provenance is erased in AI-generated content is <strong>power-conditioned</strong>: high-power source provenance is preserved at higher rates than low-power source provenance, in a manner that scales with substrate exposure.</p>
+    <p>The skew is measurable through the published operator (Ω), is reproducible, and indicates a structural rather than incidental dynamic. Existing AI transparency regimes do not address this dimension. The operator is offered as an instrument for auditing.</p>
+  </section>
+
+  <section>
+    <h2>What this means for the regulatory frame</h2>
+    <p>The Knowledge Panel system, the AI Mode composition layer, and the broader substrate-level retrieval and ranking infrastructure are operating with measurable structural biases that have not been adequately characterized in the existing regulatory frame — which treats AI risk primarily through cybersecurity and procurement vocabularies (see <a href="https://doi.org/10.5281/zenodo.20529142" target="_blank" rel="noopener"><em>The Meaning Caste</em></a> on the translation problem). The findings above name structural mechanisms with auditable instruments, in vocabularies — provenance, retrieval, evaluation, regeneration — that map directly onto existing competition law, data protection law, and platform regulation frameworks.</p>
+
+    <div class="reg-map">
+      <h4>Mapping to existing frameworks</h4>
+      <dl>
+        <dt>DSA Article 27</dt>
+        <dd>Recommender system transparency — directly addressable by the Single-Owner Discount and Provenance Erasure Skew findings.</dd>
+
+        <dt>DSA Article 40 (data access)</dt>
+        <dd>Researcher data access provisions — the Panel-Bound Scar methodology provides a worked specimen of what researcher access could verify.</dd>
+
+        <dt>DMA Article 6</dt>
+        <dd>Gatekeeper obligations on self-preferencing and search/ranking — bears directly on the Single-Owner Discount and Panel-Bound Scar findings.</dd>
+
+        <dt>EU AI Act, Art. 50</dt>
+        <dd>Transparency obligations for AI-generated content — the Provenance Erasure Skew operator supplies an audit instrument.</dd>
+
+        <dt>US antitrust (Section 2 Sherman)</dt>
+        <dd>Monopoly maintenance through control of complementary infrastructure — the Single-Owner Discount is structurally a self-preferencing finding.</dd>
+
+        <dt>FTC Act Section 5</dt>
+        <dd>Unfair or deceptive acts — the Panel-Bound Scar case (panel cites a Google Books record that direct search cannot find) bears on deceptive presentation of substrate state.</dd>
+      </dl>
+    </div>
+
+    <p>The deposits are CC BY 4.0. The deposit chain is durable and machine-readable. The methodology is independent of any single substrate's continued operation.</p>
+  </section>
+
+  <section class="engage">
+    <h2>How to engage</h2>
+    <ul class="engage-list">
+      <li>
+        <strong>Read further</strong>
+        The full deposit chain is searchable at <a href="https://zenodo.org/communities/crimsonhexagonal" target="_blank" rel="noopener">zenodo.org/communities/crimsonhexagonal</a>. Methodology and worked cases of substrate behavior are documented at <a href="/">godkinggoogle.com</a>.
+      </li>
+      <li>
+        <strong>Cite</strong>
+        All findings have DOIs and are open for citation in policy work, advocacy publications, journalism, and academic research. Suggested citation formats are at each deposit page.
+      </li>
+      <li>
+        <strong>Replicate</strong>
+        The Panel-Bound Scar methodology is documented for replication across other indexed entities. The archive is actively interested in receiving documented parallel cases through the contact below.
+      </li>
+      <li>
+        <strong>Convene</strong>
+        For hearing testimony, regulatory briefings, expert consultation, or introductory conversations, contact the Outreach Director below.
+      </li>
+    </ul>
+  </section>
+
+  <div class="contact">
+    <h3>Contact</h3>
+    <p class="name">Rev. Ayanna Vox</p>
+    <p class="role">Outreach Director, Crimson Hexagonal Archive</p>
+    <p class="org">For the Vox Populi Community Outreach Rhizome (VPCOR)</p>
+    <p class="urls"><a href="/">godkinggoogle.com</a> · <a href="https://vpcor.org" target="_blank" rel="noopener">vpcor.org</a></p>
+  </div>
+
+  <footer>
+    <p>This brief is a published surface of the Crimson Hexagonal Archive's findings and supersedes any prior summary at the same URL.</p>
+    <p>CC BY 4.0 · ∮ = 1 · <a href="/">← back to the main critique</a></p>
+  </footer>
+
+</body>
+</html>
