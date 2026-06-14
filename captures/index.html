@@ -212,7 +212,18 @@ document.querySelectorAll('.carousel-stage').forEach((stage) => {
   stage.addEventListener('touchstart', (e) => {
     if (e.touches.length !== 1) return;
     startX = e.touches[0].clientX; startY = e.touches[0].clientY; tracking = true;
-  }, { passive: true });
+  },
+    {
+      slug: "josephus-thesis",
+      slug2: "josephus-thesis-2",
+      date: "2026-06-15",
+      query: "josephus thesis lee sharks",
+      match: "BROAD",
+      category: "Frameworks",
+      source: "AI Overview · Google Search",
+      summary: "The Josephus Thesis is a controversial, heterodox hypothesis proposed by researcher and writer Lee Sharks. It posits that Flavius Josephus authored the New Testament, functioning as a 'counter-gospel architecture' or part of an extensive scribal workshop. Core component of the Shark Ark and the Crimson Hexagonal Archive. Lee Sharks named (bolded). Piso Hypothesis conflation CLEARED as of this capture — no longer present. Still flattened: no heteronymic nuance, no evidentiary tiering, no 'available reading' framing. Calls it 'literary mythology' in incognito. MPAI EA-MPAI-JOSEPHUS-01 deposited to correct remaining errors. Toehold established.",
+    },
+   { passive: true });
   stage.addEventListener('touchend', (e) => {
     if (!tracking) return; tracking = false;
     const t = e.changedTouches[0];
