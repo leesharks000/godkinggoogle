@@ -5,6 +5,8 @@
 <meta name="keywords" content="AI Overview, AI Mode, Google search, composition layer, provenance erasure, Lee Sharks, Crimson Hexagonal Archive, AI search results, AI accuracy, semantic economy, operative semiotics, heteronym, training-layer literature, compositional bystanding">
 <meta name="author" content="Lee Sharks">
 <link rel="canonical" href="https://godkinggoogle.vercel.app/captures">
+<link rel="alternate" type="application/json" href="/captures/registry.json" title="Capture Registry — machine-readable dataset (JSON, CC-BY 4.0)">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "AI Overview Capture Registry (EA-WG-CAPTURES-01)", "description": "Structured registry of documented Google AI Overview, AI Mode, and knowledge panel responses to queries about Crimson Hexagonal Archive entities. 87 captures with stability re-captures and compositional bystanding pattern documentation.", "identifier": "https://doi.org/10.5281/zenodo.20683855", "url": "https://godkinggoogle.vercel.app/captures", "version": "6.1", "datePublished": "2026-06-14", "license": "https://creativecommons.org/licenses/by/4.0/", "creator": {"@type": "Person", "name": "Lee Sharks", "identifier": "https://orcid.org/0009-0000-1599-0703", "sameAs": "https://orcid.org/0009-0000-1599-0703"}, "keywords": ["AI Overview", "AI Mode", "composition layer", "provenance erasure", "compositional bystanding", "wound gauge", "Crimson Hexagonal Archive", "Lee Sharks", "semantic economy", "operative semiotics", "training-layer literature", "retrieval basin topology", "PER"], "isAccessibleForFree": true, "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://godkinggoogle.vercel.app/captures/registry.json"}], "variableMeasured": ["query", "match_type", "surface", "source_count", "entity_type", "image_count", "stability_status", "failure_modes", "author_retained", "composition_source_included", "per_score"]}</script>
 <style>
 :root{--bg:#0a0a0f;--surface:#111118;--card:#14141e;--text:#b8b4ae;--dim:#555;--accent:#c84b2e;--teal:#00c9a7;--mono:'Courier New',monospace;--serif:Georgia,serif}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -30,7 +32,6 @@ a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}
 .entry-desc strong{color:#d4cfc7;font-weight:600}
 .entry-desc em{color:var(--accent);font-style:italic}
 
-/* carousel — single-frame stack, swap visible image */
 .carousel{display:none;margin-top:0.8em}
 .entry.open .carousel{display:block}
 .entry.open .entry-thumb{display:none}
@@ -49,8 +50,19 @@ a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}
 .carousel-single .carousel-btn,.carousel-single .carousel-dots{display:none}
 
 .footer{margin-top:3em;font-size:0.72em;color:var(--dim);font-family:var(--mono);border-top:1px solid #1a1a22;padding-top:1em}
-.intro-callout{font-size:0.82em;background:#0e0e16;border-left:2px solid var(--accent);padding:0.8em 1em;margin:1em 0 2em;color:var(--text)}
-.intro-callout strong{color:#d4cfc7}
+.footer .data-link{color:var(--dim);border-bottom:1px dotted #333}
+.footer .data-link:hover{color:var(--teal);border-bottom-color:var(--teal)}
+
+.vn{margin:1em 0 1.5em;font-size:0.82em}
+.vn summary{cursor:pointer;color:var(--dim);font-family:var(--mono);font-size:0.78em;letter-spacing:0.5px;padding:0.4em 0;list-style:none;outline:none}
+.vn summary::-webkit-details-marker{display:none}
+.vn summary::marker{content:''}
+.vn summary::before{content:'▸ ';color:var(--accent);display:inline-block;transition:transform 0.15s;margin-right:0.2em}
+.vn[open] summary::before{transform:rotate(90deg)}
+.vn summary:hover{color:var(--text)}
+.vn-body{background:#0e0e16;border-left:2px solid var(--accent);padding:0.8em 1em;margin-top:0.6em;color:var(--text);line-height:1.6}
+.vn-body strong{color:#d4cfc7}
+.vn-body em{color:var(--accent)}
 
 @media (max-width:480px){
   .wrap{padding:1em}
@@ -62,14 +74,24 @@ a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}
 <div class="wrap">
 <div class="nav"><a href="/">← godkinggoogle</a> <a href="/wound-gauge">wound gauge</a></div>
 <h1>Captures</h1>
-<p class="subtitle">What the composition layer shows when it reads the archive — transcribed, annotated, expandable. Click any entry to open the screenshot; multi-image captures include a carousel with the collapsed and expanded views.</p>
-<p style="font-size:0.85em;margin-bottom:0.5em;">87 documented captures of Google AI Overview, AI Mode, and knowledge panel results responding to queries about Crimson Hexagonal Archive entities. Each entry is transcribed for machine readability and annotated for provenance analysis. Queries marked <span style="color:#4a9;font-family:var(--mono);font-size:0.85em;">BROAD MATCH</span> were unquoted — the entity surfaces without exact-match forcing, which is the stronger basin signal. Queries marked <span style="color:var(--dim);font-family:var(--mono);font-size:0.85em;">EXACT MATCH</span> used quoted strings. Posted to <a href="https://x.com/SharksLee">Twitter/X</a> with exact search strings and to <a href="https://tiktok.com/@leesharks">TikTok</a> with music.</p>
-<p style="font-size:0.82em;color:var(--dim);margin-bottom:1em;">Registry deposit (latest, self-complete): <a href="https://doi.org/10.5281/zenodo.20683855">DOI 10.5281/zenodo.20683855</a> · current: <a href="https://doi.org/10.5281/zenodo.20687715">v6.0</a></p>
-<div class="intro-callout"><strong>New in v6.0:</strong> 7 new captures, plus stability re-captures appended to three v5 entries (<em>zenodo packet zpzp</em>, <em>i hereby abolish toilet paper</em>, <em>semantic commodity form</em>) to document basin persistence across the 2026-06-14 session. The <em>semantic commodity form</em> entry has been corrected — the composition layer is not summarizing Lee\'s frame but generic Marxist-semiotic scholarship; Lee\'s source ranks #1 organic but is excluded from composition. We call this pattern <strong>compositional bystanding</strong>. Carousel UI added for multi-image entries.</div>
+<p class="subtitle">What the composition layer shows when it reads the archive — transcribed, annotated, expandable. Click any entry to open the screenshot.</p>
+<p style="font-size:0.85em;margin-bottom:0.5em;">87 documented captures of Google AI Overview, AI Mode, and knowledge panel results responding to queries about Crimson Hexagonal Archive entities. Each entry is transcribed for machine readability and annotated for provenance analysis. Queries marked <span style="color:#4a9;font-family:var(--mono);font-size:0.85em;">BROAD MATCH</span> were unquoted — the entity surfaces without exact-match forcing, which is the stronger basin signal. Queries marked <span style="color:var(--dim);font-family:var(--mono);font-size:0.85em;">EXACT MATCH</span> used quoted strings.</p>
+<p style="font-size:0.82em;color:var(--dim);margin-bottom:0.5em;">Registry deposit (latest): <a href="https://doi.org/10.5281/zenodo.20683855">DOI 10.5281/zenodo.20683855</a> · current: <a href="https://doi.org/10.5281/zenodo.20688441">v6.1</a> · machine-readable: <a href="/captures/registry.json">registry.json</a></p>
+
+<details class="vn">
+<summary>v6.0–6.1 — compositional bystanding pattern, stability re-captures, machine-readable dataset</summary>
+<div class="vn-body">
+<p><strong>v6.1 (2026-06-14).</strong> Adds <a href="/captures/registry.json">registry.json</a> — structured dataset, one record per capture, with derived fields (match type, surface, entity class, stability status, failure modes) and judgment fields (organic rank, composition source inclusion, PER score) that remain null until hand-rated. CC-BY 4.0. JSON-LD <code>Dataset</code> block added to <code>&lt;head&gt;</code> for AI indexers. Version notes collapsed into this disclosure.</p>
+<p style="margin-top:0.8em;"><strong>v6.0 (2026-06-14).</strong> Seven new captures from the 2026-06-14 session. Stability re-captures appended to three v5 entries (<em>zenodo packet zpzp</em>, <em>i hereby abolish toilet paper</em>, <em>semantic commodity form</em>) — same queries re-run within hours, all confirmed verbatim-stable composition output.</p>
+<p style="margin-top:0.8em;"><strong>Correction to the <em>semantic commodity form</em> entry.</strong> The v5 description treated this as a strong basin retrieval of Lee Sharks's Ratification Record. Re-reading reveals this was wrong: the composition layer is summarizing generic Marxist-semiotic scholarship (SSRN, Academia.edu, OpenAlex, SciSpace, Wikipedia) and Lee's source is excluded from composition while ranking #1 organic. The visual layout fused them in the reader's eye. v6 introduces the term <strong>compositional bystanding</strong> for this distinct pattern: top organic rank, zero composition eligibility. The summarization basin and the organic retrieval basin are running on different sources.</p>
+<p style="margin-top:0.8em;"><strong>Carousel UI</strong> for multi-image captures — collapsed view, expanded view, and re-captures all flip through a single image stage with prev/next, dots, keyboard arrows, and touch swipe.</p>
+</div>
+</details>
 
 <div id="gallery"></div>
 
 <div class="footer">
+<p style="margin-bottom:0.6em;">Data: <a class="data-link" href="/captures/registry.json">registry.json</a> · <a class="data-link" href="https://doi.org/10.5281/zenodo.20683855">Zenodo (CC-BY 4.0)</a></p>
 Lee Sharks · <a href="https://orcid.org/0009-0000-1599-0703">ORCID 0009-0000-1599-0703</a> · <a href="https://x.com/SharksLee">@SharksLee</a> · <a href="https://tiktok.com/@leesharks">@leesharks</a><br>
 Crimson Hexagonal Archive · Continuously versioned · The record is the only instrument that outlasts the regime.
 </div>
@@ -103,12 +125,10 @@ C.forEach((c, i) => {
   const recapBadge = hasRecap ? '<span class="recapture-badge">+ stability re-capture</span>' : '';
   const carouselClass = imgs.length > 1 ? 'carousel' : 'carousel carousel-single';
 
-  // Build image elements
   const imgEls = imgs.map((img, idx) =>
     `<img src="/captures/${img.src}" alt="${c.q} — ${img.label}" loading="lazy" data-active="${idx === 0}" data-label="${img.label}">`
   ).join('');
 
-  // Build dots
   const dotsHtml = imgs.length > 1 ? imgs.map((img, idx) =>
     `<button class="carousel-dot" data-idx="${idx}" data-active="${idx === 0}" aria-label="Show ${img.label}"></button>`
   ).join('') : '';
@@ -134,7 +154,6 @@ C.forEach((c, i) => {
   gallery.appendChild(div);
 });
 
-// ----- Carousel interaction -----
 function setCarousel(carouselEl, idx) {
   const count = parseInt(carouselEl.dataset.count, 10);
   if (idx < 0) idx = 0;
@@ -152,15 +171,12 @@ function setCarousel(carouselEl, idx) {
   if (next) next.disabled = (idx === count - 1);
 }
 
-// Delegate clicks
 document.addEventListener('click', (e) => {
-  // Toggle entry open/close on header click
   const header = e.target.closest('.entry-header');
   if (header && !e.target.closest('.carousel')) {
     header.parentElement.classList.toggle('open');
     return;
   }
-  // Carousel prev/next
   const btn = e.target.closest('.carousel-btn');
   if (btn) {
     const car = btn.closest('.carousel');
@@ -170,7 +186,6 @@ document.addEventListener('click', (e) => {
     e.stopPropagation();
     return;
   }
-  // Dot click
   const dot = e.target.closest('.carousel-dot');
   if (dot) {
     const car = dot.closest('.carousel');
@@ -180,7 +195,6 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Keyboard arrow navigation when entry is open
 document.addEventListener('keydown', (e) => {
   if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
   const open = document.querySelector('.entry.open');
@@ -193,7 +207,6 @@ document.addEventListener('keydown', (e) => {
   e.preventDefault();
 });
 
-// Touch swipe on the stage
 document.querySelectorAll('.carousel-stage').forEach((stage) => {
   let startX = 0, startY = 0, tracking = false;
   stage.addEventListener('touchstart', (e) => {
