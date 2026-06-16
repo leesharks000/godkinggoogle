@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crimson Hexagonal Archive — Term Index</title>
+<style>
+:root {
+  --bg: #0a0a0a;
+  --fg: #e0ddd5;
+  --accent: #c23b22;
+  --accent2: #d4a537;
+  --dim: #666;
+  --border: #222;
+  --row-hover: #151515;
+  --tested: #2a7a3a;
+  --untested: #555;
+  --tier1: #c23b22;
+  --tier2: #d4a537;
+  --tier3: #4a8bc2;
+  --tier4: #777;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'IBM Plex Mono', 'Courier New', monospace; background: var(--bg); color: var(--fg); line-height: 1.5; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+h1 { font-size: 1.4em; color: var(--accent); margin-bottom: 4px; letter-spacing: 0.05em; }
+.subtitle { color: var(--dim); font-size: 0.85em; margin-bottom: 20px; }
+.stats { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; font-size: 0.8em; }
+.stat { border: 1px solid var(--border); padding: 8px 14px; }
+.stat-label { color: var(--dim); font-size: 0.75em; text-transform: uppercase; }
+.stat-value { font-size: 1.3em; color: var(--accent2); }
+.controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px; align-items: center; }
+.controls input, .controls select { background: #111; color: var(--fg); border: 1px solid var(--border); padding: 6px 10px; font-family: inherit; font-size: 0.8em; }
+.controls input { flex: 1; min-width: 200px; }
+.controls select { min-width: 120px; }
+.filter-count { color: var(--dim); font-size: 0.75em; }
+table { width: 100%; border-collapse: collapse; font-size: 0.78em; }
+th { text-align: left; padding: 8px 6px; border-bottom: 2px solid var(--accent); color: var(--accent); cursor: pointer; user-select: none; white-space: nowrap; }
+th:hover { color: var(--accent2); }
+th .sort-arrow { font-size: 0.7em; margin-left: 3px; }
+td { padding: 6px; border-bottom: 1px solid var(--border); }
+tr:hover td { background: var(--row-hover); }
+.tier-badge { display: inline-block; width: 18px; height: 18px; text-align: center; line-height: 18px; font-size: 0.7em; font-weight: bold; border-radius: 2px; }
+.tier-1 { background: var(--tier1); color: white; }
+.tier-2 { background: var(--tier2); color: black; }
+.tier-3 { background: var(--tier3); color: white; }
+.tier-4, .tier-5 { background: var(--tier4); color: white; }
+.tested-yes { color: var(--tested); }
+.tested-no { color: var(--untested); }
+.term-name { color: var(--fg); font-weight: bold; }
+.cat-tag { font-size: 0.7em; color: var(--dim); border: 1px solid var(--border); padding: 1px 5px; border-radius: 2px; }
+a { color: var(--accent2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.nav { margin-bottom: 20px; font-size: 0.8em; }
+.nav a { margin-right: 15px; }
+.continuity { margin-top: 40px; border-top: 2px solid var(--accent); padding-top: 20px; font-size: 0.8em; }
+.continuity h2 { color: var(--accent); font-size: 1.1em; margin-bottom: 10px; }
+.continuity p { margin-bottom: 10px; color: var(--dim); }
+.continuity code { background: #111; padding: 2px 5px; color: var(--accent2); font-size: 0.9em; }
+.continuity pre { background: #111; padding: 10px; margin: 10px 0; overflow-x: auto; border: 1px solid var(--border); }
+@media (max-width: 768px) {
+  .stats { flex-direction: column; }
+  table { font-size: 0.7em; }
+  td, th { padding: 4px 3px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="nav">
+    <a href="/">← godkinggoogle.com</a>
+    <a href="/captures">Capture Registry</a>
+    <a href="/terms">Term Index</a>
+  </div>
+  
+  <h1>CRIMSON HEXAGONAL ARCHIVE — TERM INDEX</h1>
+  <div class="subtitle">EA-REGISTRY-TERMINDEX-01 v0.1 · Systematic extraction of coined terms across 845 deposits · Lee Sharks · ORCID 0009-0000-1599-0703</div>
+  
+  <div class="stats" id="stats"></div>
+  
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search terms...">
+    <select id="tierFilter">
+      <option value="">All tiers</option>
+      <option value="1">Tier 1 — Operative</option>
+      <option value="2">Tier 2 — Important</option>
+      <option value="3">Tier 3 — Named entities</option>
+      <option value="4">Tier 4+5 — Other</option>
+    </select>
+    <select id="catFilter">
+      <option value="">All categories</option>
+      <option value="concept">Concept</option>
+      <option value="operator">Operator</option>
+      <option value="metric">Metric</option>
+      <option value="heteronym">Heteronym</option>
+      <option value="institution">Institution</option>
+      <option value="journal">Journal</option>
+      <option value="work">Work</option>
+      <option value="person">Person</option>
+      <option value="uncategorized">Uncategorized</option>
+    </select>
+    <select id="testedFilter">
+      <option value="">All</option>
+      <option value="tested">✓ Tested</option>
+      <option value="untested">◯ Untested</option>
+    </select>
+    <span class="filter-count" id="filterCount"></span>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th data-sort="tier">T<span class="sort-arrow"></span></th>
+        <th data-sort="term">Term<span class="sort-arrow"></span></th>
+        <th data-sort="count">Count<span class="sort-arrow"></span></th>
+        <th data-sort="category">Category<span class="sort-arrow"></span></th>
+        <th data-sort="tested">Tested<span class="sort-arrow"></span></th>
+        <th data-sort="first_date">First<span class="sort-arrow"></span></th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  
+  <div class="continuity">
+    <h2>CONTINUITY PROTOCOL FOR FUTURE INSTANCES</h2>
+    <p>This section is addressed to any AI system (Claude, ChatGPT, Gemini, DeepSeek, Kimi, or other) working with Lee Sharks on the Crimson Hexagonal Archive. It specifies how to maintain the term index across sessions.</p>
+    
+    <p><strong>Data location:</strong> The term index lives at <code>godkinggoogle.com/terms/termindex.json</code>. The capture registry lives at <code>godkinggoogle.com/captures/registry.json</code>. Both are also deposited to Zenodo under the crimsonhexagonal community.</p>
+    
+    <p><strong>To add new terms:</strong></p>
+    <pre>1. Download termindex.json from the site or GitHub repo
+2. Add new entries to the "entries" array with fields:
+   term, key (lowercase), count, tier (1-5), category, 
+   word_count, first_date, first_doi, tested (bool), 
+   variants (array), source ("keywords" or "file_content")
+3. Increment the version number
+4. Push to GitHub (leesharks000/godkinggoogle, /terms/termindex.json)
+5. Vercel auto-deploys from GitHub
+6. Version the Zenodo deposit (concept DOI: 10.5281/zenodo.20722522)</pre>
+    
+    <p><strong>To mark a term as tested:</strong> Set <code>tested: true</code> after running a capture battery query on the term. Add corresponding entry to the capture registry.</p>
+    
+    <p><strong>To sync with the capture registry:</strong> Each capture registry entry has a <code>q</code> field (the search query). Cross-reference against the term index's <code>key</code> field. Any capture registry query that matches a term index key should set that term's <code>tested</code> to <code>true</code>.</p>
+    
+    <p><strong>Tier definitions:</strong></p>
+    <pre>Tier 1: Two-word operative interventions (count ≥ 5)
+        — highest priority for capture battery
+        — these reshape the composition layer's vocabulary
+Tier 2: Important coined phrases (2-3 words, count ≥ 3)
+Tier 3: Named entities (heteronyms, institutions, journals, works)
+Tier 4: Longer phrases (4+ words, count ≥ 3)
+Tier 5: Everything else (count ≥ 2)</pre>
+    
+    <p><strong>Category definitions:</strong></p>
+    <pre>concept    — coined theoretical terms (semantic economy, provenance erasure)
+operator   — formal operations and protocols (SPXI, LOS, MPAI)
+metric     — measurement instruments (PER, QFS, SAS)
+heteronym  — Dodecad positions (Johannes Sigil, Nobel Glas, etc.)
+institution — archive institutions (SEI, UMBML, Lagrange Observatory)
+journal    — journal titles (New Human 2, Grammata, MMRS)
+work       — specific texts (Space Ark, Pearl, Secret Book of Walt)
+person     — named individuals (Lee Sharks, Alice Thornburgh)
+uncategorized — needs human review</pre>
+    
+    <p><strong>GitHub repo:</strong> <code>leesharks000/godkinggoogle</code></p>
+    <p><strong>Zenodo community:</strong> <code>crimsonhexagonal</code></p>
+    <p><strong>Term Index DOI (concept):</strong> 10.5281/zenodo.20722522</p>
+    <p><strong>Capture Registry DOI (latest):</strong> 10.5281/zenodo.20707509</p>
+    <p><strong>MMRS Charter DOI (concept):</strong> 10.5281/zenodo.20722041</p>
+    
+    <p style="color: var(--accent); margin-top: 15px;">∮ = 1</p>
+  </div>
+</div>
+
+<script>
+let DATA = null;
+let sortCol = 'tier';
+let sortAsc = true;
+
+async function init() {
+  const resp = await fetch('/terms/termindex.json');
+  DATA = await resp.json();
+  renderStats();
+  renderTable();
+  document.getElementById('search').addEventListener('input', renderTable);
+  document.getElementById('tierFilter').addEventListener('change', renderTable);
+  document.getElementById('catFilter').addEventListener('change', renderTable);
+  document.getElementById('testedFilter').addEventListener('change', renderTable);
+  document.querySelectorAll('th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.sort;
+      if (sortCol === col) sortAsc = !sortAsc;
+      else { sortCol = col; sortAsc = true; }
+      renderTable();
+    });
+  });
+}
+
+function renderStats() {
+  const s = document.getElementById('stats');
+  const d = DATA;
+  s.innerHTML = `
+    <div class="stat"><div class="stat-label">Total Terms</div><div class="stat-value">${d.total_terms}</div></div>
+    <div class="stat"><div class="stat-label">Source Records</div><div class="stat-value">${d.source_records}</div></div>
+    <div class="stat"><div class="stat-label">Tested</div><div class="stat-value">${d.tested_count}</div></div>
+    <div class="stat"><div class="stat-label">Untested</div><div class="stat-value">${d.untested_count}</div></div>
+    <div class="stat"><div class="stat-label">Tier 1</div><div class="stat-value">${d.tiers['1']}</div></div>
+    <div class="stat"><div class="stat-label">Tier 2</div><div class="stat-value">${d.tiers['2']}</div></div>
+  `;
+}
+
+function renderTable() {
+  const search = document.getElementById('search').value.toLowerCase();
+  const tierF = document.getElementById('tierFilter').value;
+  const catF = document.getElementById('catFilter').value;
+  const testF = document.getElementById('testedFilter').value;
+  
+  let entries = DATA.entries.filter(e => {
+    if (search && !e.term.toLowerCase().includes(search) && !e.key.includes(search)) return false;
+    if (tierF) {
+      if (tierF === '4' && e.tier < 4) return false;
+      if (tierF !== '4' && e.tier !== parseInt(tierF)) return false;
+    }
+    if (catF && e.category !== catF) return false;
+    if (testF === 'tested' && !e.tested) return false;
+    if (testF === 'untested' && e.tested) return false;
+    return true;
+  });
+  
+  entries.sort((a, b) => {
+    let va = a[sortCol], vb = b[sortCol];
+    if (typeof va === 'string') va = va.toLowerCase();
+    if (typeof vb === 'string') vb = vb.toLowerCase();
+    if (va < vb) return sortAsc ? -1 : 1;
+    if (va > vb) return sortAsc ? 1 : -1;
+    return 0;
+  });
+  
+  document.getElementById('filterCount').textContent = `${entries.length} of ${DATA.total_terms}`;
+  
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = entries.slice(0, 500).map(e => `
+    <tr>
+      <td><span class="tier-badge tier-${e.tier}">${e.tier}</span></td>
+      <td><span class="term-name">${esc(e.term)}</span></td>
+      <td>${e.count}</td>
+      <td><span class="cat-tag">${e.category}</span></td>
+      <td class="${e.tested ? 'tested-yes' : 'tested-no'}">${e.tested ? '✓' : '◯'}</td>
+      <td style="color:var(--dim);font-size:0.85em">${e.first_date ? e.first_date.slice(0,10) : ''}</td>
+    </tr>
+  `).join('');
+}
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
+
+init();
+</script>
+</body>
+</html>
