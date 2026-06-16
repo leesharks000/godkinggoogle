@@ -14,8 +14,8 @@
     "4": 24,
     "5": 225
   },
-  "tested_count": 142,
-  "untested_count": 1207,
+  "tested_count": 144,
+  "untested_count": 1205,
   "entries": [
     {
       "term": "semantic economy",
@@ -1704,7 +1704,7 @@
       "word_count": 2,
       "first_date": "2026-03-18",
       "first_doi": "10.5281/zenodo.19099674",
-      "tested": false,
+      "tested": true,
       "variants": [],
       "source": "keywords"
     },
@@ -3599,7 +3599,7 @@
       "word_count": 2,
       "first_date": "2026-04-08",
       "first_doi": "10.5281/zenodo.19477219",
-      "tested": false,
+      "tested": true,
       "variants": [
         "Revelation first",
         "revelation first"
