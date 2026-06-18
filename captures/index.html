@@ -124,11 +124,11 @@ function renderEntries() {
           <div class="entry-query">${esc(e.q)}</div>
           <div class="entry-meta">${e.date||''} · ${e.sf||''} ${mt ? `<span class="${mtClass}">${mt}</span>` : ''}</div>
           <div class="entry-desc">${esc(short)}</div>
-          <button class="expand-btn" onclick="var b=document.getElementById('${entryId}').querySelector('.entry-body');b.classList.toggle('collapsed');this.textContent=b.classList.contains('collapsed')?'▸ expand':'▾ collapse'">${hasMore || imgs.length > 0 ? '▸ expand' : ''}</button>
+          ${hasMore || imgs.length > 0 ? `<button class="expand-btn" onclick="var b=document.getElementById('${entryId}').querySelector('.entry-body');b.classList.toggle('collapsed');this.textContent=b.classList.contains('collapsed')?'\u25b8 expand':'\u25be collapse'">\u25b8 expand</button>` : ''}
         </div>
       </div>
       <div class="entry-body collapsed" style="padding-left:96px;margin-top:0.5em">
-        ${hasMore ? `<div class="entry-desc" style="font-size:0.85em">${esc(full)}</div>` : ''}
+        ${hasMore ? `<div class="entry-desc" style="font-size:0.85em">${esc(full.substring(short.length))}</div>` : ''}
         ${imgs.length > 0 ? `<div class="gallery">${imgs.map(img => {
           const s = getImgSrc(img);
           return `<img src="${IMG_BASE}${s}" alt="${typeof img === 'string' ? s : (img.label||s)}" loading="lazy" onclick="event.stopPropagation();showModal(this.src)" onerror="this.style.display='none'">`;
