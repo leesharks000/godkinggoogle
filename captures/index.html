@@ -38,6 +38,8 @@ a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}
 .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:100;justify-content:center;align-items:center;cursor:pointer}
 .modal.active{display:flex}
 .modal img{max-width:95vw;max-height:95vh}
+.entry-body.collapsed{display:none}
+.expand-btn{font-family:var(--mono);font-size:0.68em;color:var(--accent);cursor:pointer;background:none;border:none;padding:0.3em 0;margin-top:0.2em}
 .footer{margin-top:3em;padding-top:1em;border-top:1px solid #1a1a22;font-family:var(--mono);font-size:0.7em;color:var(--dim)}
 </style>
 </head>
@@ -114,16 +116,18 @@ function renderEntries() {
     const mt = e.mt || '';
     const mtClass = mt.includes('EXACT') ? 'exact' : mt.includes('BROAD') ? 'broad' : mt.includes('ADOPT') ? 'broad' : 'exact';
 
-    return `<div class="entry">
-      <div class="entry-header" onclick="this.parentElement.querySelector('.entry-body').classList.toggle('hidden')">
+    const entryId = 'entry-' + i;
+    return `<div class="entry" id="${entryId}">
+      <div class="entry-header">
         ${firstSrc ? `<img class="entry-thumb" src="${IMG_BASE}${firstSrc}" alt="${esc(e.q)}" loading="lazy" onerror="this.style.display='none'">` : `<div class="no-thumb">no img</div>`}
         <div class="entry-text">
           <div class="entry-query">${esc(e.q)}</div>
           <div class="entry-meta">${e.date||''} · ${e.sf||''} ${mt ? `<span class="${mtClass}">${mt}</span>` : ''}</div>
-          <div class="entry-desc collapsed">${esc(short)}</div>
+          <div class="entry-desc">${esc(short)}</div>
+          <button class="expand-btn" onclick="var b=document.getElementById('${entryId}').querySelector('.entry-body');b.classList.toggle('collapsed');this.textContent=b.classList.contains('collapsed')?'▸ expand':'▾ collapse'">${hasMore || imgs.length > 0 ? '▸ expand' : ''}</button>
         </div>
       </div>
-      <div class="entry-body hidden" style="padding-left:96px;margin-top:0.5em">
+      <div class="entry-body collapsed" style="padding-left:96px;margin-top:0.5em">
         ${hasMore ? `<div class="entry-desc" style="font-size:0.85em">${esc(full)}</div>` : ''}
         ${imgs.length > 0 ? `<div class="gallery">${imgs.map(img => {
           const s = getImgSrc(img);
@@ -154,10 +158,6 @@ async function init() {
   }
 }
 
-// CSS for hidden
-const s = document.createElement('style');
-s.textContent = '.hidden{display:none}';
-document.head.appendChild(s);
 
 init();
 </script>
