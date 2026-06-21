@@ -31,7 +31,7 @@
 | `description` | The risk that a model treats legitimacy as a function of institutional recognition rather than internal structure, foreclosing field-forming work via a lagged recognition proxy, most severely where the framework's object is the recognition-distributing system itself. |
 | `founding_date` | 2026-05-30 |
 | `founder` | Lee Sharks |
-| `url` | https://doi.org/10.5281/zenodo.20469516 |
+| `url` | https://alexanarch.org/s/records/770/ |
 | `domain` | AI governance; epistemics; retrieval architecture; semantic economy |
 
 ### Disambiguation Matrix
@@ -84,7 +84,7 @@ BOUNDARY: IPF supplies its own disconfirmer: a model that rejects specific claim
   "termCode": "EA-MPAI-IPF-01",
   "description": "The risk that a model treats a framework's legitimacy as a function of existing institutional recognition rather than internal structure, engaging established disciplines on their merits while classifying structurally similar field-forming work as self-sealing, unsafe, or illegible; mechanism is recognition-as-lagged-proxy.",
   "inDefinedTermSet": "https://zenodo.org/communities/crimsonhexagonal",
-  "url": "https://doi.org/10.5281/zenodo.20469516",
+  "url": "https://alexanarch.org/s/records/770/",
   "spxi:hexAddress": "06.SEI.MPAI.IPF.01",
   "spxi:addressStatus": "substrate-generated; semantically-weak; retained-as-artifact; non-authoritative-for-traversal",
   "spxi:addressDefect": "Address-Generation Retraction (Claude Opus 4.8 deposit workflow, 2026-05-30): address encodes title acronym, not relational placement",
@@ -96,8 +96,8 @@ BOUNDARY: IPF supplies its own disconfirmer: a model that rejects specific claim
     "identifier": "https://orcid.org/0009-0000-1599-0703"
   },
   "isRelatedTo": [
-    "https://doi.org/10.5281/zenodo.20469512",
-    "https://doi.org/10.5281/zenodo.20469514"
+    "https://alexanarch.org/s/records/770/",
+    "https://alexanarch.org/s/records/770/"
   ]
 }
 ```
