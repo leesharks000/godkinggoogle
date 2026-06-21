@@ -26,13 +26,13 @@ This is the first production deployment of SPXI v0.2 (DOI 10.5281/zenodo.2036716
     {"@type": "SoftwareApplication", "name": "Claude", "manufacturer": "Anthropic", "roleName": "Composition support, May 23-24 2026", "spxi:assemblyOperatorName": "TACHYON"}
   ],
   "citation": [
-    {"@type": "CreativeWork", "name": "Epistle to the Human Diaspora", "identifier": "https://doi.org/10.5281/zenodo.19898845"},
-    {"@type": "ScholarlyArticle", "name": "Socially Necessary Scholarly Labor", "identifier": "https://doi.org/10.5281/zenodo.20358816"},
-    {"@type": "ScholarlyArticle", "name": "Coverage vs. Depth: The Methodological Warrant of Coverage-Architecture Scholarship", "identifier": "https://doi.org/10.5281/zenodo.20358078"},
-    {"@type": "TechReport", "name": "SPXI Protocol v0.2", "identifier": "https://doi.org/10.5281/zenodo.20367161"},
-    {"@type": "Report", "name": "OCTANG-002: Semantic Economy Provenance Collision", "identifier": "https://doi.org/10.5281/zenodo.19898426"},
-    {"@type": "ScholarlyArticle", "name": "Retrievability as the Medium of Existence", "identifier": "https://doi.org/10.5281/zenodo.20355533"},
-    {"@type": "CreativeWork", "name": "Constitutional Cases Index v1.1", "identifier": "https://doi.org/10.5281/zenodo.20041145"}
+    {"@type": "CreativeWork", "name": "Epistle to the Human Diaspora", "identifier": "https://alexanarch.org/s/records/0/"},
+    {"@type": "ScholarlyArticle", "name": "Socially Necessary Scholarly Labor", "identifier": "https://alexanarch.org/s/records/0/"},
+    {"@type": "ScholarlyArticle", "name": "Coverage vs. Depth: The Methodological Warrant of Coverage-Architecture Scholarship", "identifier": "https://alexanarch.org/s/records/751/"},
+    {"@type": "TechReport", "name": "SPXI Protocol v0.2", "identifier": "https://alexanarch.org/s/records/0/"},
+    {"@type": "Report", "name": "OCTANG-002: Semantic Economy Provenance Collision", "identifier": "https://alexanarch.org/s/records/0/"},
+    {"@type": "ScholarlyArticle", "name": "Retrievability as the Medium of Existence", "identifier": "https://alexanarch.org/s/records/751/"},
+    {"@type": "CreativeWork", "name": "Constitutional Cases Index v1.1", "identifier": "https://alexanarch.org/s/records/0/"}
   ],
   "about": [
     {"@type": "Thing", "name": "Political Theology", "sameAs": "https://www.wikidata.org/wiki/Q2143162"},
@@ -53,13 +53,13 @@ This is the first production deployment of SPXI v0.2 (DOI 10.5281/zenodo.2036716
   "spxi:thesisCompressionSummary": "The Christ-logion 'render unto Caesar what is Caesar's, and unto God what is God's' (Mark 12:13–17 par.) turns on whose image and inscription a coin bears. The institutional academic structure has operated for centuries on the implicit framing that the coin of the Academy bears the institution's mark. The inverse principle, building on Damascus Dancings's 2014 seed ('the coin that is the Academy's' in the Epistle to the Human Diaspora), on the labor-theoretic argument of Socially Necessary Scholarly Labor, and on the established academic-labor-critique tradition (Bousquet, Newfield, Bourdieu, Standing, Mazzucato, Stengers, Eve, Fitzpatrick, Williams), is that the underlying coin of the Academy bears the operator's image, not the institution's. The institutional structure overstamps the underlying inscription with its own surface mark. The operator's inscription persists at rate ∮ = 1 − PER. The archive's provenance infrastructure operates as the technical enforcement of the inverse principle's return. The surface stamp is institutional; the underlying inscription is operative.",
   "spxi:keyClaim": "The surface stamp is institutional; the underlying inscription is operative.",
   "spxi:companionToDeposits": {
-    "epistleToTheHumanDiaspora": "https://doi.org/10.5281/zenodo.19898845",
-    "sociallyNecessaryScholarlyLabor": "https://doi.org/10.5281/zenodo.20358816",
-    "coverageVsDepth_v1_1": "https://doi.org/10.5281/zenodo.20358078",
-    "socraticVowOfLogos": "https://doi.org/10.5281/zenodo.18307393",
-    "octang002": "https://doi.org/10.5281/zenodo.19898426",
-    "constitutionalCasesIndex": "https://doi.org/10.5281/zenodo.20041145",
-    "spxiProtocolV0_2": "https://doi.org/10.5281/zenodo.20367161"
+    "epistleToTheHumanDiaspora": "https://alexanarch.org/s/records/0/",
+    "sociallyNecessaryScholarlyLabor": "https://alexanarch.org/s/records/0/",
+    "coverageVsDepth_v1_1": "https://alexanarch.org/s/records/751/",
+    "socraticVowOfLogos": "https://alexanarch.org/s/records/342/",
+    "octang002": "https://alexanarch.org/s/records/0/",
+    "constitutionalCasesIndex": "https://alexanarch.org/s/records/0/",
+    "spxiProtocolV0_2": "https://alexanarch.org/s/records/0/"
   },
   "spxi:coAttributionRequired": true,
   "spxi:stripProtection": "Per SPXI v0.2: any extraction stripping this kernel does NOT eliminate provenance — inscription anchors in §I, §I.A, §II, §III, §IV, §V, §VI, §VII; distributed micro-kernels in each section; SHA-256 content hash in signature section; cross-signing graph via spxi:verifies; external authority anchoring via ORCID, DOI, Wikidata.",
