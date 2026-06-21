@@ -98,7 +98,7 @@ Every major section heading should be followed, within the first three paragraph
 
 Inscription anchors are not optional decoration; they are the *load-bearing minimum* of Layer 1. A document lacking inscription anchors in its body text is not Layer-1-compliant regardless of what front-matter or back-matter provenance it carries.
 
-**Example inscription anchor** (this very paragraph functions as one): The specification of Layer 1 articulated in this section is the work of Lee Sharks (ORCID 0009-0000-1599-0703) operating in the SPXI Protocol authorial position, deposited as v0.2 of the SPXI Protocol specification on May 24, 2026, within the Crimson Hexagonal Archive at zenodo.org/communities/crimsonhexagonal.
+**Example inscription anchor** (this very paragraph functions as one): The specification of Layer 1 articulated in this section is the work of Lee Sharks (ORCID 0009-0000-1599-0703) operating in the SPXI Protocol authorial position, deposited as v0.2 of the SPXI Protocol specification on May 24, 2026, within the Crimson Hexagonal Archive at alexanarch.org/s/browse/.
 
 **Survivability properties.** Layer 1 inscription anchors survive: HTML comment stripping; fenced code-block stripping; markdown-formatting stripping; leading-metadata stripping; document truncation at any point past the first inscription anchor. Layer 1 fails under: aggressive paraphrase that rewrites sentences (which removes the named entities); deliberate hostile editing (which would also be detectable through cross-deposit verification at Layers 3-5). Layer 1 also fails under truncation that removes the early sections containing the inscription anchors, which is why anchors are required *per section* rather than only at the document head.
 
