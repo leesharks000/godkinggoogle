@@ -83,7 +83,7 @@ BOUNDARY: IPF supplies its own disconfirmer: a model that rejects specific claim
   "alternateName": "IPF",
   "termCode": "EA-MPAI-IPF-01",
   "description": "The risk that a model treats a framework's legitimacy as a function of existing institutional recognition rather than internal structure, engaging established disciplines on their merits while classifying structurally similar field-forming work as self-sealing, unsafe, or illegible; mechanism is recognition-as-lagged-proxy.",
-  "inDefinedTermSet": "https://zenodo.org/communities/crimsonhexagonal",
+  "inDefinedTermSet": "https://alexanarch.org/s/browse/",
   "url": "https://alexanarch.org/s/records/770/",
   "spxi:hexAddress": "06.SEI.MPAI.IPF.01",
   "spxi:addressStatus": "substrate-generated; semantically-weak; retained-as-artifact; non-authoritative-for-traversal",
