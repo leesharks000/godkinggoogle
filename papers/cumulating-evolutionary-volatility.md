@@ -148,7 +148,7 @@ No single layer needs to be malicious. The aggregate produces a volatile histori
 
 ### Formal expression
 
-In the language of the *Constitution of the Semantic Economy* (DOI [10.5281/zenodo.18320411](https://www.alexanarch.org/go/?doi=10.5281/zenodo.18320411)) and the *Semantic Physics* synthesis (DOI [10.5281/zenodo.20208384](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20208384)):
+In the language of the *Constitution of the Semantic Economy* (DOI [10.5281/zenodo.18320411](https://www.alexanarch.org/go/?doi=10.5281/zenodo.18320411)) and the *Semantic Physics* synthesis (DOI [10.5281/zenodo.20208383](https://www.alexanarch.org/go/?doi=10.5281/zenodo.20208383)):
 
 > ∮ = 1 − PER
 
