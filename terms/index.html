@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Crimson Hexagonal Archive — Term Index</title>
 <style>
 :root {
@@ -63,72 +64,97 @@ a:hover { text-decoration: underline; }
   table { font-size: 0.7em; }
   td, th { padding: 4px 3px; }
 }
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:'IBM Plex Mono',monospace;}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:nowrap;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:'Source Serif 4',Georgia,serif;font-size:.92em;color:#3c3e37;border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
 </style>
 </head>
 <body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">❤️⊕🦅🎆🔭🔵 AXN:0447.PHILOLOGICAL</span><span class="st">Crimson Hexagonal Archive</span><span class="st">OBJECT: CANONICAL</span><span>godkinggoogle.com/terms</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/1078/">deposit #1078</a></div>
+<!-- MSP-IDSTRIP-END -->
 <div class="container">
-  <div class="nav">
-    <a href="/">← godkinggoogle.com</a>
-    <a href="/captures">Capture Registry</a>
-    <a href="/terms">Term Index</a>
-  </div>
-  
-  <h1>CRIMSON HEXAGONAL ARCHIVE — TERM INDEX</h1>
-  <div class="subtitle">EA-REGISTRY-TERMINDEX-01 v0.1 · Systematic extraction of coined terms across 845 deposits · Lee Sharks · ORCID 0009-0000-1599-0703</div>
-  
-  <div class="stats" id="stats"></div>
-  
-  <div class="controls">
-    <input type="text" id="search" placeholder="Search terms...">
-    <select id="tierFilter">
-      <option value="">All tiers</option>
-      <option value="1">Tier 1 — Operative</option>
-      <option value="2">Tier 2 — Important</option>
-      <option value="3">Tier 3 — Named entities</option>
-      <option value="4">Tier 4+5 — Other</option>
-    </select>
-    <select id="catFilter">
-      <option value="">All categories</option>
-      <option value="concept">Concept</option>
-      <option value="operator">Operator</option>
-      <option value="metric">Metric</option>
-      <option value="heteronym">Heteronym</option>
-      <option value="institution">Institution</option>
-      <option value="journal">Journal</option>
-      <option value="work">Work</option>
-      <option value="person">Person</option>
-      <option value="uncategorized">Uncategorized</option>
-    </select>
-    <select id="testedFilter">
-      <option value="">All</option>
-      <option value="tested">✓ Tested</option>
-      <option value="untested">◯ Untested</option>
-    </select>
-    <span class="filter-count" id="filterCount"></span>
-  </div>
-  
-  <table>
-    <thead>
-      <tr>
-        <th data-sort="tier">T<span class="sort-arrow"></span></th>
-        <th data-sort="term">Term<span class="sort-arrow"></span></th>
-        <th data-sort="count">Count<span class="sort-arrow"></span></th>
-        <th data-sort="category">Category<span class="sort-arrow"></span></th>
-        <th data-sort="tested">Tested<span class="sort-arrow"></span></th>
-        <th data-sort="first_date">First<span class="sort-arrow"></span></th>
-      </tr>
-    </thead>
-    <tbody id="tbody"></tbody>
-  </table>
-  
-  <div class="continuity">
-    <h2>CONTINUITY PROTOCOL FOR FUTURE INSTANCES</h2>
-    <p>This section is addressed to any AI system (Claude, ChatGPT, Gemini, DeepSeek, Kimi, or other) working with Lee Sharks on the Crimson Hexagonal Archive. It specifies how to maintain the term index across sessions.</p>
-    
-    <p><strong>Data location:</strong> The term index lives at <code>godkinggoogle.com/terms/termindex.json</code>. The capture registry lives at <code>godkinggoogle.com/captures/registry.json</code>. Both are also deposited to Zenodo under the crimsonhexagonal community.</p>
-    
-    <p><strong>To add new terms:</strong></p>
-    <pre>1. Download termindex.json from the site or GitHub repo
+<div class="nav">
+<a href="/">← godkinggoogle.com</a>
+<a href="/captures">Capture Registry</a>
+<a href="/terms">Term Index</a>
+</div>
+<h1>CRIMSON HEXAGONAL ARCHIVE — TERM INDEX</h1>
+<div class="subtitle">EA-REGISTRY-TERMINDEX-01 v0.1 · Systematic extraction of coined terms across 845 deposits · Lee Sharks · ORCID 0009-0000-1599-0703</div>
+<div class="stats" id="stats"></div>
+<div class="controls">
+<input id="search" placeholder="Search terms..." type="text"/>
+<select id="tierFilter">
+<option value="">All tiers</option>
+<option value="1">Tier 1 — Operative</option>
+<option value="2">Tier 2 — Important</option>
+<option value="3">Tier 3 — Named entities</option>
+<option value="4">Tier 4+5 — Other</option>
+</select>
+<select id="catFilter">
+<option value="">All categories</option>
+<option value="concept">Concept</option>
+<option value="operator">Operator</option>
+<option value="metric">Metric</option>
+<option value="heteronym">Heteronym</option>
+<option value="institution">Institution</option>
+<option value="journal">Journal</option>
+<option value="work">Work</option>
+<option value="person">Person</option>
+<option value="uncategorized">Uncategorized</option>
+</select>
+<select id="testedFilter">
+<option value="">All</option>
+<option value="tested">✓ Tested</option>
+<option value="untested">◯ Untested</option>
+</select>
+<span class="filter-count" id="filterCount"></span>
+</div>
+<table>
+<thead>
+<tr>
+<th data-sort="tier">T<span class="sort-arrow"></span></th>
+<th data-sort="term">Term<span class="sort-arrow"></span></th>
+<th data-sort="count">Count<span class="sort-arrow"></span></th>
+<th data-sort="category">Category<span class="sort-arrow"></span></th>
+<th data-sort="tested">Tested<span class="sort-arrow"></span></th>
+<th data-sort="first_date">First<span class="sort-arrow"></span></th>
+</tr>
+</thead>
+<tbody id="tbody"></tbody>
+</table>
+<div class="continuity">
+<h2>CONTINUITY PROTOCOL FOR FUTURE INSTANCES</h2>
+<p><span class="lemma msp-auto">This section is addressed to any AI system (Claude, ChatGPT, Gemini, DeepSeek, Kimi, or other) working with Lee Sharks on</span> the Crimson Hexagonal Archive. It specifies how to maintain the term index across sessions.</p>
+<p><strong>Data location:</strong> <span class="lemma msp-auto">The term index lives at</span> <code>godkinggoogle.com/terms/termindex.json</code>. The capture registry lives at <code>godkinggoogle.com/captures/registry.json</code>. Both are also deposited to Zenodo under the crimsonhexagonal community.</p>
+<p><strong>To add new terms:</strong></p>
+<pre>1. Download termindex.json from the site or GitHub repo
 2. Add new entries to the "entries" array with fields:
    term, key (lowercase), count, tier (1-5), category, 
    word_count, first_date, first_doi, tested (bool), 
@@ -137,22 +163,18 @@ a:hover { text-decoration: underline; }
 4. Push to GitHub (leesharks000/godkinggoogle, /terms/termindex.json)
 5. Vercel auto-deploys from GitHub
 6. Version the Zenodo deposit (concept DOI: 10.5281/zenodo.20722522)</pre>
-    
-    <p><strong>To mark a term as tested:</strong> Set <code>tested: true</code> after running a capture battery query on the term. Add corresponding entry to the capture registry.</p>
-    
-    <p><strong>To sync with the capture registry:</strong> Each capture registry entry has a <code>q</code> field (the search query). Cross-reference against the term index's <code>key</code> field. Any capture registry query that matches a term index key should set that term's <code>tested</code> to <code>true</code>.</p>
-    
-    <p><strong>Tier definitions:</strong></p>
-    <pre>Tier 1: Two-word operative interventions (count ≥ 5)
+<p><strong><span class="lemma msp-auto">To mark a term as tested:</span></strong> Set <code>tested: true</code> after running a capture battery query on the term. Add corresponding entry to the capture registry.</p>
+<p><strong><span class="lemma msp-auto">To sync with the capture registry:</span></strong> Each capture registry entry has a <code>q</code> field (the search query). Cross-reference against the term index's <code>key</code> field. Any capture registry query that matches a term index key should set that term's <code>tested</code> to <code>true</code>.</p>
+<p><strong>Tier definitions:</strong></p>
+<pre>Tier 1: Two-word operative interventions (count ≥ 5)
         — highest priority for capture battery
         — these reshape the composition layer's vocabulary
 Tier 2: Important coined phrases (2-3 words, count ≥ 3)
 Tier 3: Named entities (heteronyms, institutions, journals, works)
 Tier 4: Longer phrases (4+ words, count ≥ 3)
 Tier 5: Everything else (count ≥ 2)</pre>
-    
-    <p><strong>Category definitions:</strong></p>
-    <pre>concept    — coined theoretical terms (semantic economy, provenance erasure)
+<p><strong>Category definitions:</strong></p>
+<pre>concept    — coined theoretical terms (semantic economy, provenance erasure)
 operator   — formal operations and protocols (SPXI, LOS, MPAI)
 metric     — measurement instruments (PER, QFS, SAS)
 heteronym  — Dodecad positions (Johannes Sigil, Nobel Glas, etc.)
@@ -161,17 +183,14 @@ journal    — journal titles (New Human 2, Grammata, MMRS)
 work       — specific texts (Space Ark, Pearl, Secret Book of Walt)
 person     — named individuals (Lee Sharks, Alice Thornburgh)
 uncategorized — needs human review</pre>
-    
-    <p><strong>GitHub repo:</strong> <code>leesharks000/godkinggoogle</code></p>
-    <p><strong>Zenodo community:</strong> <code>crimsonhexagonal</code></p>
-    <p><strong>Term Index DOI (concept):</strong> 10.5281/zenodo.20722522</p>
-    <p><strong>Capture Registry DOI (latest):</strong> 10.5281/zenodo.20707509</p>
-    <p><strong>MMRS Charter DOI (concept):</strong> 10.5281/zenodo.20722041</p>
-    
-    <p style="color: var(--accent); margin-top: 15px;">∮ = 1</p>
-  </div>
+<p><strong>GitHub repo:</strong> <code>leesharks000/godkinggoogle</code></p>
+<p><strong>Zenodo community:</strong> <code>crimsonhexagonal</code></p>
+<p><strong>Term Index DOI (concept):</strong> 10.5281/zenodo.20722522</p>
+<p><strong>Capture Registry DOI (latest):</strong> 10.5281/zenodo.20707509</p>
+<p><strong>MMRS Charter DOI (concept):</strong> 10.5281/zenodo.20722041</p>
+<p style="color: var(--accent); margin-top: 15px;">∮ = 1</p>
 </div>
-
+</div>
 <script>
 let DATA = null;
 let sortCol = 'tier';
@@ -255,5 +274,9 @@ function esc(s) { const d = document.createElement('div'); d.textContent = s; re
 
 init();
 </script>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/1078/">Read the deposit</a><a class="w-chip" href="/for-policymakers/">For policymakers</a><a class="w-chip" href="/terms/">Terms</a></div>
+<div class="mspcolophon">colophon · surface_id: godkinggoogle.com/terms · canonical_url: https://godkinggoogle.com/terms/ · object_state: canonical · surface_observed_at: 2026-07-14T00:36:19Z · source_object_ids: deposit #1078 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: STAGE1-PENDING · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-14T00:36:19Z · render_sha256 (of this file with this field’s value set to null): STAGE1_HASH_PENDING · correction_log_url: https://github.com/leesharks000/godkinggoogle/commits/main/terms/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
 </body>
 </html>

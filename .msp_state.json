@@ -1,0 +1,46 @@
+{
+  "editorial_at": "2026-07-14T00:36:19.666570+00:00",
+  "phase": "editorial",
+  "recurse": false,
+  "skip": [],
+  "files": [
+    "index.html",
+    "for-policymakers/index.html",
+    "terms/index.html",
+    "captures/index.html"
+  ],
+  "editorial_changes": {
+    "index.html": {
+      "tokens": true,
+      "idstrip": true,
+      "link_typing": 52,
+      "apparatus": true,
+      "lemmas": 124,
+      "helix": 0
+    },
+    "for-policymakers/index.html": {
+      "tokens": true,
+      "idstrip": true,
+      "link_typing": 1,
+      "apparatus": true,
+      "lemmas": 22,
+      "helix": 0
+    },
+    "terms/index.html": {
+      "tokens": true,
+      "idstrip": true,
+      "link_typing": 0,
+      "apparatus": true,
+      "lemmas": 4,
+      "helix": 0
+    },
+    "captures/index.html": {
+      "tokens": true,
+      "idstrip": true,
+      "link_typing": 0,
+      "apparatus": true,
+      "lemmas": 0,
+      "helix": 0
+    }
+  }
+}

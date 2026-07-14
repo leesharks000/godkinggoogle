@@ -1,0 +1,23 @@
+{
+  "surface_id": "godkinggoogle.com",
+  "canonical_url": "https://godkinggoogle.com/",
+  "axn": "AXN:0447.PHILOLOGICAL.❤️⊕🦅🎆🔭🔵",
+  "deposit_number": 1078,
+  "title": "godkinggoogle.com — The Google Critique",
+  "object_state": "canonical",
+  "tier": 1,
+  "register": "narrative",
+  "skin": {},
+  "doors": [
+    {"label": "Read the deposit", "href": "https://www.alexanarch.org/s/records/1078/"},
+    {"label": "For policymakers", "href": "/for-policymakers/"},
+    {"label": "Terms", "href": "/terms/"}
+  ],
+  "index_files": [
+    "index.html",
+    "for-policymakers/index.html",
+    "terms/index.html",
+    "captures/index.html"
+  ],
+  "notes": "Surface-as-its-own-deposit anchor. Minted 2026-07-13 via direct-deposit path (mint_deposit.py, not the external issue-form route). Original Zenodo DOI 10.5281/zenodo.20309780 (2026-05-19) went only to Zenodo and was purged with the June 19 account termination. This surface is now independently addressable via AXN. The 11 markdown papers under papers/ are content that gets included in the canonical text of separate deposits, not reading surfaces themselves; they stay out of the MSP apply pass."
+}
