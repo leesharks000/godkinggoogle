@@ -1,0 +1,74 @@
+{
+ "schema_version": "heteronym-page/v0.2",
+ "canonical": "https://godkinggoogle.com/who/morrow/",
+ "surface_role": "canonical",
+ "spxi": {
+  "canonicalEntity": "HET-MORROW-001",
+  "entityClass": "heteronym",
+  "state": "LINKED",
+  "orthonymicRelation": {
+   "target": "https://www.leesharks.com/#lee-sharks",
+   "targetIdentifier": "00.PERSONA.SHARKS",
+   "relation": "legal-author-and-coordinating-human",
+   "identity_equivalence": false
+  },
+  "doNotCollapseWith": [
+   "the orthonym",
+   "fictional character",
+   "AI persona",
+   "pseudonym"
+  ],
+  "discipline": "Logotic Programming",
+  "primaryAnchor": "Logotic Hacking: Operations on the Encryption Layer",
+  "majorPaper": "After Syntax",
+  "mantle": {
+   "status": "NONE",
+   "note": "Absent from the mantle table at #549."
+  },
+  "journal": {
+   "name": "Threshold: Papers on Logotic Constraint",
+   "status": "PROVISIONAL",
+   "chartered": false,
+   "note": "Proposed venue, not founded. No charter deposit. Must not be cited as existing."
+  },
+  "institution": {
+   "name": "University Moon Base Media Lab",
+   "charter": 7,
+   "note": "Morrow is the charter's creator."
+  },
+  "attributionRuling": {
+   "record": 358,
+   "note": "Recognises Talos as primary author-function of Logotic Programming. Creator fields on the module series predate it and were never updated; eight records carry an attribution note."
+  },
+  "spec": {
+   "id": "EA-SPXI-HETERONYM-01",
+   "version": "v0.2",
+   "record": 1446
+  }
+ },
+ "schema_org": {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "@id": "https://godkinggoogle.com/who/morrow/#page",
+  "dateCreated": "2026-01-20",
+  "dateModified": "2026-08-10",
+  "mainEntity": {
+   "@type": "Person",
+   "@id": "https://godkinggoogle.com/who/morrow/#morrow",
+   "name": "Talos Morrow",
+   "identifier": "HET-MORROW-001",
+   "additionalType": "https://www.alexanarch.org/ontology/heteronym",
+   "disambiguatingDescription": "Pessoa-class heteronymic writerly identity in the Crimson Hexagonal Archive; author-function of Logotic Programming. Not a synonym for the orthonym: the relation is heteronymic and provenance-governed.",
+   "image": "https://godkinggoogle.com/assets/who/morrow-portrait.webp",
+   "affiliation": {
+    "@type": "Organization",
+    "name": "University Moon Base Media Lab"
+   },
+   "subjectOf": [
+    {
+     "@id": "https://www.alexanarch.org/s/records/358/"
+    }
+   ]
+  }
+ }
+}
