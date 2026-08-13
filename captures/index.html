@@ -42,6 +42,11 @@ a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}
 .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:100;justify-content:center;align-items:center;cursor:pointer}
 .modal.active{display:flex}
 .modal img{max-width:95vw;max-height:95vh}
+
+.entry-reading{margin-top:.9em;padding-top:.7em;border-top:1px solid #1a1a22;font-size:.86em;line-height:1.62;color:#c9c9d1;white-space:pre-wrap}
+.entry-sub{font-family:var(--mono);font-size:.68em;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:.35em}
+.entry-more{margin-top:.8em;font-family:var(--mono);font-size:.7em}
+.entry-more a{color:var(--accent);text-decoration:none;border-bottom:1px dotted}
 .entry-body.collapsed{display:none}
 .expand-btn{font-family:var(--mono);font-size:0.68em;color:var(--accent);cursor:pointer;background:none;border:none;padding:0.3em 0;margin-top:0.2em}
 .footer{margin-top:3em;padding-top:1em;border-top:1px solid #1a1a22;font-family:var(--mono);font-size:0.7em;color:var(--dim)}
@@ -145,7 +150,16 @@ function showModal(src) {
   document.getElementById('modal').classList.add('active');
 }
 
-function getImgSrc(img) { return typeof img === 'string' ? img : (img.src || ''); }
+function getImgSrc(img){
+    /* PREFER THE ABSOLUTE URL THE REGISTRY SUPPLIES.
+       imgs holds repo-relative paths that resolve only against alexanarch. This
+       gallery prefixed its own IMG_BASE onto them and 404'd on every image. The
+       projection now carries img_urls — absolute https, resolvable from any host
+       — and a renderer should never have to know another node's file layout. */
+    if (img && /^https?:\/\//.test(img)) return img;
+    if (img && img.indexOf('data/') === 0) return 'https://www.alexanarch.org/' + img;
+    return IMG_BASE + img;
+  }
 
 function renderEntries() {
   const q = document.getElementById('search').value.toLowerCase();
@@ -157,7 +171,7 @@ function renderEntries() {
 
   const el = document.getElementById('entries');
   el.innerHTML = entries.map((e, i) => {
-    const imgs = (e.imgs || []).filter(img => getImgSrc(img));
+    const imgs = ((e.img_urls && e.img_urls.length) ? e.img_urls : (e.imgs || [])).filter(img => getImgSrc(img));
     const firstSrc = imgs.length > 0 ? getImgSrc(imgs[0]) : '';
     const { short, full } = splitDesc(e.d || '');
     const hasMore = full && full.length > short.length;
@@ -175,7 +189,7 @@ function renderEntries() {
           ${hasMore || imgs.length > 0 ? `<button class="expand-btn" onclick="var b=document.getElementById('${entryId}').querySelector('.entry-body');b.classList.toggle('collapsed');this.textContent=b.classList.contains('collapsed')?'\u25b8 expand':'\u25be collapse'">\u25b8 expand</button>` : ''}
         </div>
       </div>
-      <div class="entry-body collapsed" style="padding-left:96px;margin-top:0.5em">
+      <div class="entry-body collapsed" style="padding-left:96px;margin-top:0.5em">${e.reading ? `<div class="entry-reading"><div class="entry-sub">reading</div>${esc(e.reading)}</div>` : ''}<div class="entry-more"><a href="https://www.alexanarch.org/captures/#${e.slug||''}">full record at alexanarch →</a></div>
         ${hasMore ? `<div class="entry-desc" style="font-size:0.85em">${esc(full.substring(short.length))}</div>` : ''}
         ${imgs.length > 0 ? `<div class="gallery">${imgs.map(img => {
           const s = getImgSrc(img);
