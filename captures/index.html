@@ -181,7 +181,7 @@ function renderEntries() {
     const entryId = 'entry-' + i;
     return `<div class="entry" id="${entryId}">
       <div class="entry-header">
-        ${firstSrc ? `<img class="entry-thumb" src="${IMG_BASE}${firstSrc}" alt="${esc(e.q)}" loading="lazy" onerror="this.style.display='none'">` : `<div class="no-thumb">no img</div>`}
+        ${firstSrc ? `<img class="entry-thumb" src="${firstSrc}" alt="${esc(e.q)}" loading="lazy" onerror="this.style.display='none'">` : `<div class="no-thumb">no img</div>`}
         <div class="entry-text">
           <div class="entry-query">${esc(e.q)}</div>
           <div class="entry-meta">${e.date||''} · ${e.sf||''} ${mt ? `<span class="${mtClass}">${mt}</span>` : ''}</div>
@@ -193,7 +193,7 @@ function renderEntries() {
         ${hasMore ? `<div class="entry-desc" style="font-size:0.85em">${esc(full.substring(short.length))}</div>` : ''}
         ${imgs.length > 0 ? `<div class="gallery">${imgs.map(img => {
           const s = getImgSrc(img);
-          return `<img src="${IMG_BASE}${s}" alt="${typeof img === 'string' ? s : (img.label||s)}" loading="lazy" onclick="event.stopPropagation();showModal(this.src)" onerror="this.style.display='none'">`;
+          return `<img src="${s}" alt="${typeof img === 'string' ? s : (img.label||s)}" loading="lazy" onclick="event.stopPropagation();showModal(this.src)" onerror="this.style.display='none'">`;
         }).join('')}</div>` : ''}
       </div>
     </div>`;
