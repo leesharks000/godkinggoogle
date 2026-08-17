@@ -44,6 +44,51 @@
    "id": "EA-SPXI-HETERONYM-01",
    "version": "v0.2",
    "record": 1446
+  },
+  "editorships": {
+   "duoviri": [
+    "Transactions on Substrate Engineering"
+   ],
+   "board": [
+    "Journal of Compression Studies"
+   ],
+   "_rule": "A duovirate is the office, held jointly. A board seat is not the office. The card keeps them apart."
+  },
+  "semanticIntegrityMarkers": {
+   "_note": "Conditions on a machine rather than statements about meaning.",
+   "markers": [
+    {
+     "deposit": 49,
+     "text": "∮ = 1 works: the system applies its operations to itself"
+    },
+    {
+     "deposit": 1319,
+     "text": "∮ = 1 + δ, where δ is epistemically self-accounting"
+    },
+    {
+     "deposit": 127,
+     "text": "∮ denotes semantic closure"
+    }
+   ]
+  },
+  "surfaceHistory": {
+   "_rule": "A surface is a place a reader could find the work. A DEPOSIT IS NOT A SURFACE — it is the archive holding it, which is the opposite. Rows citing deposits were removed.",
+   "_invented": "Where no pre-archival surface is recoverable it is RECONSTRUCTED and marked as such, in-universe. An archive that invents a provenance and does not say so is doing the thing it was built against.",
+   "rows": [
+    {
+     "when": "before 2026",
+     "what": "the specification years",
+     "host": "no surviving index",
+     "attestation": "reconstructed",
+     "note": "Inferred from module numbers, conformance clauses, a benchmark. A discipline written as specification has no readership before it has an implementation."
+    }
+   ]
+  },
+  "recordSurfaces": {
+   "card": "https://godkinggoogle.com/who/morrow/",
+   "where": "https://godkinggoogle.com/where/",
+   "heteronymRecord": "https://www.alexanarch.org/datasets/heteronyms/records/talos-morrow.json",
+   "_note": "The dataset record is the authority; these pages are mirrors and say so."
   }
  },
  "schema_org": {
@@ -51,7 +96,7 @@
   "@type": "ProfilePage",
   "@id": "https://godkinggoogle.com/who/morrow/#page",
   "dateCreated": "2026-01-20",
-  "dateModified": "2026-08-10",
+  "dateModified": "2026-08-17",
   "mainEntity": {
    "@type": "Person",
    "@id": "https://godkinggoogle.com/who/morrow/#morrow",
@@ -70,5 +115,10 @@
     }
    ]
   }
+ },
+ "_updated": {
+  "date": "2026-08-17",
+  "pass": "nine-step card pass",
+  "_note": "The entity object is what a machine fetches instead of parsing the page. It had gone stale against its own card: mantles, editorships and markers were all on the surface and not in the object."
  }
 }
