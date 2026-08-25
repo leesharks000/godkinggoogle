@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<link rel="canonical" href="https://www.godkinggoogle.com/captures/">
+<meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>AI Overview Captures — What the Composition Layer Shows | Lee Sharks</title>
+<meta content="Documented captures of Google AI Overview and AI Mode results for Crimson Hexagonal Archive entities. Each capture transcribed and annotated." name="description"/>
+<meta content="Lee Sharks" name="author"/>
+<link rel="stylesheet" href="/assets/type.css">
+<style>
+:root{--bg:#0a0a0f;--surface:#111118;--card:#14141e;--text:#b8b4ae;--dim:#555;--accent:#c84b2e;--teal:#00c9a7;--mono:'Courier New',monospace;--serif:Georgia,serif}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--serif);line-height:1.65}
+.wrap{max-width:800px;margin:0 auto;padding:1.5em}
+h1{font-size:1.6em;color:#fff;margin-bottom:0.2em}
+h2{font-family:var(--mono);font-size:0.78em;color:var(--accent);text-transform:uppercase;letter-spacing:2px;margin-top:2.5em;margin-bottom:0.8em;border-bottom:1px solid #1a1a22;padding-bottom:0.4em}
+.subtitle{color:var(--dim);font-size:0.88em;margin-bottom:1.5em;font-style:italic}
+a{color:var(--teal);text-decoration:none}a:hover{text-decoration:underline}
+.nav{font-family:var(--mono);font-size:0.78em;margin-bottom:1.5em}.nav a{color:var(--dim);margin-right:0.8em}
+.cat-nav{font-family:var(--mono);font-size:0.72em;margin:1em 0;padding:0.6em 0;border-top:1px solid #1a1a22;border-bottom:1px solid #1a1a22;display:flex;flex-wrap:wrap;gap:0.4em}
+.cat-nav a{color:var(--dim);white-space:nowrap;padding:0.15em 0.4em;border:1px solid transparent;border-radius:2px}
+.cat-nav a:hover,.cat-nav a.active{color:var(--teal);border-color:#1a1a22}
+.stats{font-family:var(--mono);font-size:0.78em;color:var(--dim);margin-bottom:1em}
+.stats span{color:var(--teal);font-size:1.1em}
+.search-box{width:100%;background:#111118;color:var(--text);border:1px solid #1a1a22;padding:0.5em 0.8em;font-family:var(--mono);font-size:0.82em;margin-bottom:1em;border-radius:3px}
+.entry{border-bottom:1px solid #1a1a22;padding:1em 0}
+.entry-header{display:flex;align-items:flex-start;gap:1em;cursor:pointer}
+.entry-thumb{width:80px;height:140px;object-fit:cover;object-position:top;border:1px solid #222;border-radius:3px;flex-shrink:0;background:#0e0e16}
+.no-thumb{width:80px;height:140px;flex-shrink:0;background:#0e0e16;border:1px solid #1a1a22;border-radius:3px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:0.6em;color:var(--dim)}
+.entry-text{flex:1;min-width:0}
+.entry-query{font-family:var(--mono);font-size:0.9em;color:var(--teal);margin-bottom:0.15em;word-break:break-word}
+.entry-meta{font-family:var(--mono);font-size:0.7em;color:var(--dim);margin-bottom:0.4em}
+.entry-desc{font-size:0.85em;color:var(--text);line-height:1.6}
+.entry-desc.collapsed{max-height:4.8em;overflow:hidden;position:relative}
+.entry-desc.collapsed::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2em;background:linear-gradient(transparent,var(--bg))}
+.toggle-btn{font-family:var(--mono);font-size:0.7em;color:var(--accent);cursor:pointer;margin-top:0.3em;background:none;border:none}
+.broad{color:#4a9;font-size:0.65em;font-family:var(--mono);letter-spacing:1px}
+.exact{color:var(--dim);font-size:0.65em;font-family:var(--mono);letter-spacing:1px}
+.gallery{display:flex;gap:6px;flex-wrap:wrap;margin-top:0.6em}
+.gallery img{max-width:180px;max-height:280px;border:1px solid #222;border-radius:3px;cursor:pointer;opacity:0.85;transition:opacity 0.2s}
+.gallery img:hover{opacity:1;border-color:var(--teal)}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.92);z-index:100;justify-content:center;align-items:center;cursor:pointer}
+.modal.active{display:flex}
+.modal img{max-width:95vw;max-height:95vh}
+
+.entry-reading{margin-top:.9em;padding-top:.7em;border-top:1px solid #1a1a22;font-size:.86em;line-height:1.62;color:#c9c9d1;white-space:pre-wrap}
+.entry-sub{font-family:var(--mono);font-size:.68em;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:.35em}
+.entry-more{margin-top:.8em;font-family:var(--mono);font-size:.7em}
+.entry-more a{color:var(--accent);text-decoration:none;border-bottom:1px dotted}
+.entry-body.collapsed{display:none}
+.expand-btn{font-family:var(--mono);font-size:0.68em;color:var(--accent);cursor:pointer;background:none;border:none;padding:0.3em 0;margin-top:0.2em}
+.footer{margin-top:3em;padding-top:1em;border-top:1px solid #1a1a22;font-family:var(--mono);font-size:0.7em;color:var(--dim)}
+
+/* MSP-TOKENS-START */
+/* ══ MSP TOKENS — Mandala Surface Protocol shared contract ══
+   Contract classes: .lemma .term .axn-chip .witness-row .w .w-chip .state
+   .idstrip .helix .mspcolophon .doors .obol — skinned per surface via --msp-* vars.
+   (EA-APPARATUS-01 v0.3, #1077, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎) */
+:root{--msp-lemma:rgba(200,150,60,.30);--msp-chipfg:#7a5a1e;--msp-chipbd:rgba(160,120,50,.45);--msp-chipbg:rgba(200,150,60,.06);--msp-ok:#1c6e4a;--msp-cont:#8a6a20;--msp-halt:#a41623;--msp-dim:#6d6f66;--msp-mono:var(--mono);}
+.lemma{background:linear-gradient(transparent 58%, var(--msp-lemma) 58%);padding:0 2px;}
+.axn-chip{font-family:var(--msp-mono);font-size:.72em;background:var(--msp-chipbg);border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 7px;color:var(--msp-chipfg);white-space:nowrap;text-decoration:none;}
+.axn-chip:hover{border-color:var(--msp-chipfg);}
+.witness-row{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 2px;font-family:var(--msp-mono);font-size:.68em;}
+.witness-row .w,.w-chip{border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;color:var(--msp-dim);text-decoration:none;font-family:var(--msp-mono);font-size:.85em;white-space:nowrap;}
+.state{font-family:var(--msp-mono);font-size:.68em;border:1px solid var(--msp-chipbd);border-radius:9px;padding:1px 8px;white-space:nowrap;}
+.state.obs{color:var(--msp-ok);border-color:rgba(28,110,74,.4);}
+.state.cont{color:var(--msp-cont);}
+.idstrip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;font-family:var(--msp-mono);font-size:10.5px;color:var(--msp-dim);border:1px solid var(--rule,#d9d9d0);border-bottom:2px solid var(--msp-chipbd);background:var(--panel,#f6f6f2);padding:9px 12px;margin:14px 0 6px;}
+.idstrip .axn{color:var(--msp-chipfg);font-size:11.5px;}
+.idstrip .st{border:1px solid var(--rule,#d9d9d0);border-radius:9px;padding:1px 7px;white-space:normal;overflow-wrap:anywhere;min-width:0;}
+.helix{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 4px;font-family:var(--msp-mono);font-size:.68em;}
+.helix .slot{border:1px solid var(--msp-chipbd);border-radius:4px;padding:3px 9px;}
+.helix .slot b{font-weight:600;letter-spacing:.06em;}
+.helix .slot.ok{color:var(--msp-ok);}
+.helix .slot.div{color:var(--msp-cont);}
+.helix .slot.dead{color:var(--msp-halt);}
+.mspcolophon{font-family:var(--msp-mono);font-size:10px;color:var(--msp-dim);border-top:1px solid var(--rule,#d9d9d0);margin-top:30px;padding-top:10px;line-height:1.9;}
+.obol{font-family:var(--serif);font-size:.92em;color:var(--msp-obol-fg,#3c3e37);border-left:3px solid var(--msp-chipbd);padding:4px 0 4px 14px;margin:22px 0 4px;}
+.doors{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 6px;font-family:var(--msp-mono);}
+.doors a.w-chip{font-size:11px;padding:6px 12px;}
+/* MSP-TOKENS-END */
+/* MSP-SKIN-START — per-surface overrides for the shared apparatus contract.
+   Category: light-warm. Lives outside the MSP-TOKENS block so applicator
+   re-syncs of the shared contract don't clobber it. */
+:root{
+  --panel:#f5f1e6;
+  --rule:rgba(154,122,46,0.20);
+  --msp-lemma:rgba(154,122,46,0.24);
+  --msp-chipfg:#7a1818;
+  --msp-chipbd:rgba(154,122,46,0.35);
+  --msp-chipbg:rgba(154,122,46,0.06);
+  --msp-cont:#9a7a2e;
+  --msp-obol-fg:#1a1a1a;
+  --msp-dim:#6a655a;
+}
+/* MSP-SKIN-END */
+</style>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+</head>
+<body>
+<!-- MSP-IDSTRIP-START -->
+<div class="idstrip"><span class="axn">❤️⊕🦅🎆🔭🔵 AXN:0447.PHILOLOGICAL</span><span class="st">AI Overview Captures — What the Composition Layer Shows</span><span class="st">OBJECT: CANONICAL</span><span>godkinggoogle.com/captures</span><a class="axn-chip" href="https://www.alexanarch.org/s/records/1078/">deposit #1078</a></div>
+<!-- MSP-IDSTRIP-END -->
+<div class="wrap">
+<div class="nav">
+<a href="/who/morrow/">Who</a> &middot; <a href="/where/">Where</a>
+<a href="/">← godkinggoogle</a>
+<a href="/captures/">Captures</a>
+<a href="/papers/">Papers</a>
+<a href="/terms/">Terms</a>
+<a href="https://machinemediation.org">MMRS</a>
+</div>
+<h1>AI Overview Captures</h1>
+<div class="subtitle">What the Composition Layer Shows — Live from <a href="https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json">registry.json</a></div>
+<div class="stats" id="stats">Loading...</div>
+<input class="search-box" id="search" placeholder="Search queries or descriptions..." type="text"/>
+<div class="cat-nav" id="catNav"></div>
+<div id="entries"></div>
+<div class="footer">
+  Lee Sharks · <a href="https://orcid.org/0009-0000-1599-0703">ORCID 0009-0000-1599-0703</a> · Crimson Hexagonal Archive<br/>
+  Data: <a href="https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json">registry.json</a> · DOI: <a href="https://www.alexanarch.org/go/?doi=10.5281/zenodo.20707509">10.5281/zenodo.20707509</a><br/>
+<span style="color:var(--accent)">∮ = 1</span>
+</div>
+</div>
+<div class="modal" id="modal" onclick="this.classList.remove('active')"><img id="modalImg"/></div>
+<script>
+const IMG_BASE = '/captures/';
+const DATA_URL = 'https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json';
+let D, activeCat = '';
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s||''; return d.innerHTML; }
+
+function splitDesc(d) {
+  const words = (d||'').split(/\s+/);
+  if (words.length <= 40) return { short: d, full: null };
+  let breakIdx = -1, wc = 0;
+  for (let i = 0; i < d.length; i++) {
+    if (d[i] === ' ') wc++;
+    if (wc >= 20 && d[i] === '.' && i+1 < d.length && d[i+1] === ' ') { breakIdx = i+1; break; }
+  }
+  if (breakIdx === -1) breakIdx = d.indexOf(' ', Math.floor(d.length * 0.4));
+  return { short: d.substring(0, breakIdx), full: d };
+}
+
+function showModal(src) {
+  document.getElementById('modalImg').src = src;
+  document.getElementById('modal').classList.add('active');
+}
+
+function getImgSrc(img){
+    /* PREFER THE ABSOLUTE URL THE REGISTRY SUPPLIES.
+       imgs holds repo-relative paths that resolve only against alexanarch. This
+       gallery prefixed its own IMG_BASE onto them and 404'd on every image. The
+       projection now carries img_urls — absolute https, resolvable from any host
+       — and a renderer should never have to know another node's file layout. */
+    if (img && /^https?:\/\//.test(img)) return img;
+    if (img && img.indexOf('data/') === 0) return 'https://www.alexanarch.org/' + img;
+    return IMG_BASE + img;
+  }
+
+function renderEntries() {
+  const q = document.getElementById('search').value.toLowerCase();
+  let entries = D.entries.filter(e => {
+    if (activeCat && e.s !== activeCat) return false;
+    if (q && !e.q.toLowerCase().includes(q) && !(e.d||'').toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  const el = document.getElementById('entries');
+  el.innerHTML = entries.map((e, i) => {
+    const imgs = ((e.img_urls && e.img_urls.length) ? e.img_urls : (e.imgs || [])).filter(img => getImgSrc(img));
+    const firstSrc = imgs.length > 0 ? getImgSrc(imgs[0]) : '';
+    const { short, full } = splitDesc(e.d || '');
+    const hasMore = full && full.length > short.length;
+    const mt = e.mt || '';
+    const mtClass = mt.includes('EXACT') ? 'exact' : mt.includes('BROAD') ? 'broad' : mt.includes('ADOPT') ? 'broad' : 'exact';
+
+    const entryId = 'entry-' + i;
+    return `<div class="entry" id="${entryId}">
+      <div class="entry-header">
+        ${firstSrc ? `<img class="entry-thumb" src="${firstSrc}" alt="${esc(e.q)}" loading="lazy" onerror="this.style.display='none'">` : `<div class="no-thumb">no img</div>`}
+        <div class="entry-text">
+          <div class="entry-query">${esc(e.q)}</div>
+          <div class="entry-meta">${e.date||''} · ${e.sf||''} ${mt ? `<span class="${mtClass}">${mt}</span>` : ''}</div>
+          <div class="entry-desc">${esc(short)}</div>
+          ${hasMore || imgs.length > 0 ? `<button class="expand-btn" onclick="var b=document.getElementById('${entryId}').querySelector('.entry-body');b.classList.toggle('collapsed');this.textContent=b.classList.contains('collapsed')?'\u25b8 expand':'\u25be collapse'">\u25b8 expand</button>` : ''}
+        </div>
+      </div>
+      <div class="entry-body collapsed" style="padding-left:96px;margin-top:0.5em">${e.reading ? `<div class="entry-reading"><div class="entry-sub">reading</div>${esc(e.reading)}</div>` : ''}<div class="entry-more"><a href="https://www.alexanarch.org/captures/#${e.slug||''}">full record at alexanarch →</a></div>
+        ${hasMore ? `<div class="entry-desc" style="font-size:0.85em">${esc(full.substring(short.length))}</div>` : ''}
+        ${imgs.length > 0 ? `<div class="gallery">${imgs.map(img => {
+          const s = getImgSrc(img);
+          return `<img src="${s}" alt="${typeof img === 'string' ? s : (img.label||s)}" loading="lazy" onclick="event.stopPropagation();showModal(this.src)" onerror="this.style.display='none'">`;
+        }).join('')}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+async function init() {
+  try {
+    const r = await fetch(DATA_URL);
+    D = await r.json();
+    
+    document.getElementById('stats').innerHTML = `<span>${D.total_captures}</span> captures · v${D.version} · ${D.date||''}`;
+    
+    // Category nav
+    const cats = [...new Set(D.entries.map(e => e.s))].sort();
+    const nav = document.getElementById('catNav');
+    nav.innerHTML = `<a href="#" class="active" onclick="activeCat='';renderEntries();document.querySelectorAll('.cat-nav a').forEach(a=>a.classList.remove('active'));this.classList.add('active');return false;">All</a>` +
+      cats.map(c => `<a href="#" onclick="activeCat='${c}';renderEntries();document.querySelectorAll('.cat-nav a').forEach(a=>a.classList.remove('active'));this.classList.add('active');return false;">${c}</a>`).join('');
+    
+    renderEntries();
+    document.getElementById('search').addEventListener('input', renderEntries);
+  } catch(e) {
+    document.getElementById('stats').innerHTML = `Error: ${e.message}`;
+  }
+}
+
+
+init();
+</script>
+<!-- MSP-APPARATUS-START -->
+<div class="doors"><a class="w-chip" href="https://www.alexanarch.org/s/records/1078/">Read the deposit</a><a class="w-chip" href="/for-policymakers/">For policymakers</a><a class="w-chip" href="/terms/">Terms</a></div>
+<div class="mspcolophon">colophon · surface_id: godkinggoogle.com/captures · canonical_url: https://godkinggoogle.com/captures/ · object_state: canonical · surface_observed_at: 2026-07-14T00:36:19Z · source_object_ids: deposit #1078 · source_hashes: unknown · generator_version: hand-built static (no generator) · repository_commit: 1378f60c917f5d34cbc29775eb270c215887da74 · model_or_agent: drafted with Claude (TACHYON), MANUS-approved · operator_sequence: n/a · human_approver: Lee Sharks (MANUS) · approval_timestamp: 2026-07-14T00:36:19Z · render_sha256 (of this file with this field’s value set to null): 7cc8904eb64bd2973d173b2a570eaa12e104a3831f03d2edb440f890ada57ba5 · correction_log_url: https://github.com/leesharks000/godkinggoogle/commits/main/captures/index.html — EA-APPARATUS-01 v0.3, AXN:0446.OPERATIVE.🏛️🛡️🌅🎆📏🔎</div>
+<!-- MSP-APPARATUS-END -->
+</body></html>
