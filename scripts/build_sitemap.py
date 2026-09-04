@@ -17,7 +17,7 @@ import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-HOST = "https://godkinggoogle.com"
+HOST = "https://www.godkinggoogle.com"
 
 PRIORITY = {
     "/": "1.0",
