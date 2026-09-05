@@ -3,12 +3,12 @@
 <meta name="description" content="Captures of how machine surfaces (AI Overview, AI Mode, ChatGPT, Perplexity) received the archive, relevant to God-King Google. Rendered live from the canonical Capture Registry at alexanarch.org; every capture links to its canonical seat.">
 <link rel="canonical" href="https://www.alexanarch.org/captures/">
 <meta name="robots" content="noindex,follow">
-<style>body{margin:0;background:#0b0c10;color:#e8e6e1;font:15px/1.6 Georgia,serif}.wrap{max-width:900px;margin:0 auto;padding:28px 16px}h1{color:#c9a227;font-size:1.3em}a{color:#c9a227}.m{font-family:ui-monospace,monospace;font-size:.8em;opacity:.8}.card{border:1px solid rgba(255,255,255,.12);padding:12px 14px;margin:12px 0}.q{font-weight:600}.d{font-size:.9em;opacity:.9;margin-top:4px}.ctl{margin:12px 0;font-size:.85em}#status{font-size:.85em;opacity:.7}</style></head><body><div class="wrap">
+<style>body{margin:0;background:#0b0c10;color:#e8e6e1;font:15px/1.6 Georgia,serif}.wrap{max-width:900px;margin:0 auto;padding:28px 16px}h1{color:#c9a227;font-size:1.3em}a{color:#c9a227}.m{font-family:ui-monospace,monospace;font-size:.8em;opacity:.8}.card{border:1px solid rgba(255,255,255,.12);padding:12px 14px;margin:12px 0}.q{font-weight:600}.d{font-size:.9em;opacity:.9;margin-top:4px}.ctl{margin:12px 0;font-size:.85em}a.sort.active{font-weight:700;text-decoration:none}#status{font-size:.85em;opacity:.7}</style></head><body><div class="wrap">
 
 <h1>The Capture Registry</h1>
 <p>A <strong>window</strong> onto the canonical Capture Registry (<span class="m">EA-WG-CAPTURES-01</span>), which is projected in full — every capture, its transcript, its images — at <a href="https://www.alexanarch.org/captures/">alexanarch.org/captures/</a>. This page renders live from the canonical registry file and holds no copy; each capture below links to its canonical seat.</p>
 <noscript><p>This window renders from <a href="https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json">the canonical registry file</a> at page load. Without scripts, read the canonical gallery directly: <a href="https://www.alexanarch.org/captures/">alexanarch.org/captures/</a>.</p></noscript>
-<div class="ctl"><label><input type="checkbox" id="all"> show every capture (not only those touching God-King Google)</label> · <span id="status">loading the canonical registry…</span></div>
+<div class="ctl"><label><input type="checkbox" id="all"> show every capture (not only those touching God-King Google)</label> · sort: <a href="#" data-sort="alpha" class="sort active">A–Z</a> · <a href="#" data-sort="newest" class="sort">newest</a> · <a href="#" data-sort="oldest" class="sort">oldest</a> · <span id="status">loading the canonical registry…</span></div>
 <div id="cards"></div>
 <p class="m">Registry: <a href="https://www.alexanarch.org/data/EA-WG-CAPTURES-01.json">EA-WG-CAPTURES-01.json</a> · canonical projection: <a href="https://www.alexanarch.org/captures/">alexanarch.org/captures/</a> · ∮ = 1</p>
 </div>
@@ -16,12 +16,20 @@
 (function(){
   var FILTER = new RegExp("godkinggoogle|god-king google|god king google|\\bgkg\\b|google ai overview|suppress", 'i');
   var cards = document.getElementById('cards'), status = document.getElementById('status'), allBox = document.getElementById('all');
-  var ENTRIES = [];
+  var ENTRIES = [], activeSort = 'alpha';
+  var COLLATOR = new Intl.Collator('en', { sensitivity: 'base', numeric: true, ignorePunctuation: true });
+  function sortKey(e){ return String(e.q||'').replace(/^[«"'‘“\s]+/, '').trim(); }
+  var SORTS = {
+    alpha:  function(a,b){ return COLLATOR.compare(sortKey(a), sortKey(b)) || String(a.date||'').localeCompare(String(b.date||'')); },
+    newest: function(a,b){ return String(b.date||'').localeCompare(String(a.date||'')) || COLLATOR.compare(sortKey(a), sortKey(b)); },
+    oldest: function(a,b){ return String(a.date||'').localeCompare(String(b.date||'')) || COLLATOR.compare(sortKey(a), sortKey(b)); }
+  };
+  Array.prototype.forEach.call(document.querySelectorAll('a.sort'), function(el){ el.addEventListener('click', function(ev){ ev.preventDefault(); activeSort = el.dataset.sort; Array.prototype.forEach.call(document.querySelectorAll('a.sort'), function(x){ x.classList.toggle('active', x===el); }); render(); }); });
   function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
   function relevant(e){ var hay = [e.q, e.d, e.transcript, JSON.stringify(e.cite_list||''), e.s].join(' '); return FILTER.test(hay); }
   function render(){
     var showAll = allBox.checked, out = [], n = 0;
-    ENTRIES.slice().sort(function(a,b){ return (b.date||'').localeCompare(a.date||''); }).forEach(function(e){
+    ENTRIES.slice().sort(SORTS[activeSort] || SORTS.alpha).forEach(function(e){
       if(!showAll && !relevant(e)) return; n++;
       out.push('<div class="card"><div class="m">'+esc(e.date)+' · '+esc(e.surface)+' · '+esc(e.auth||'')+'</div>'
         +'<div class="q">'+esc(e.q)+'</div>'
